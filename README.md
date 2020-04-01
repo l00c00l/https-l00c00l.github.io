@@ -1,6 +1,6 @@
 # 码志
 
-我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
+我的个人博客：<https://l00c00l.github.io>，欢迎 Star 和 Fork。
 
 ## 概览
 
@@ -16,9 +16,9 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](https://mazhuang.org)**
+**[在线预览 &rarr;](https://l00c00l.github.io)**
 
-![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
+![screenshot home](https://l00c00l.github.io/assets/images/screenshots/home.png)
 
 ## Fork 指南
 
@@ -52,6 +52,13 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 5. 修改「关于」页面。
 
    pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
+   
+6. In the root of the publishing source, create a new file called index.md that contains the content you want to display on the main page of your site.
+Under your repository name, click  Settings.
+[配置](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site)
+
+**Under your repository name, click  Settings.**
+
 
 ## 贴心提示
 
