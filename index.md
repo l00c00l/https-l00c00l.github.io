@@ -14,7 +14,7 @@
 
 [积累砖块](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Cards+Notes.md)
 
-[所读所思](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/LCL's_reading_notes.md)
+[所读所思](https://github.com/l00c00l/Blogs/blob/master/_drafts/LCL's_reading_notes.md)
 
 
 
@@ -48,7 +48,7 @@
 > ----------------------------------------------------------------------------------
 
 
- [心理学资源与活动](https://github.com/l00c00l/LCL_Blog/blob/master/Cognitive_psychology.md)
+ [心理学资源与活动](https://github.com/l00c00l/Blogs/blob/master/_wiki/Cognitive_psychology.md)
 
 
 > ----------------------------------------------------------------------------------
@@ -68,7 +68,7 @@
 
 [国内新冠疫情时间线](https://github.com/l00c00l/wuhan2020-timeline/blob/master/%E6%97%B6%E9%97%B4%E7%BA%BFTIMELINE.md)
 
-[方方日记](https://github.com/l00c00l/LCL_Blog/blob/master/FF_diary.md)
+[方方日记](https://github.com/l00c00l/Blogs/blob/master/_wiki/FF_diary.md)
 
 > ----------------------------------------------------------------------------------
 
