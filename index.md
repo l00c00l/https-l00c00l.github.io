@@ -12,27 +12,27 @@
 ## ====== 日有所得 ====== 
 
 
-[积累砖块](https://github.com/l00c00l/Notes_Cards/blob/master/README.md)
+[积累砖块](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Cards+Notes.md)
 
-[所读所思](https://github.com/l00c00l/LCL_Blog/blob/master/LCL's_reading_notes.md)
+[所读所思](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/LCL's_reading_notes.md)
 
 
 
 ## ====== 专题文字 ====== 
 
-[我们是早上8、9点的太阳](https://github.com/l00c00l/LCL_Blog/blob/master/for_kids.md) 
+[我们是早上8、9点的太阳](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_kids.md) 
 
 
-[可怜天下父母心](https://github.com/l00c00l/LCL_Blog/blob/master/for_parents.md) 
+[可怜天下父母心](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_parents.md) 
 
 
-[成年人的世界没有容易的事](https://github.com/l00c00l/LCL_Blog/blob/master/for_adults.md) 
+[成年人的世界没有容易的事](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_adults.md) 
 
 
-[懒人懒办法](https://github.com/l00c00l/LCL_Blog/blob/master/Efficiency.md)
+[懒人懒办法](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Efficiency.md)
 
 
-[小小博士豆](https://github.com/l00c00l/LCL_Blog/blob/master/Mini_Dr.Bean.md) 
+[小小博士豆](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Mini_Dr.Bean.md) 
 
 
  [天骄博士自述]( https://github.com/l00c00l/Personal-Statement-of-ZYQ)  
@@ -42,7 +42,7 @@
 ## ====== 其它活动 ====== 
 
 
- [投资理财资源与活动](https://github.com/l00c00l/LCL_Blog/blob/master/investment.md)
+ [投资理财资源与活动](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/investment.md)
 
 
 > ----------------------------------------------------------------------------------
@@ -54,7 +54,7 @@
 > ----------------------------------------------------------------------------------
 
 
-[实践技能](https://github.com/l00c00l/LCL_Blog/blob/master/Practice.md)
+[实践技能](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Practice.md)
 
 
 > ----------------------------------------------------------------------------------
