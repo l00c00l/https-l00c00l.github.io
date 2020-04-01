@@ -1,19 +1,13 @@
-- name: Software Engineer Keywords
+- name: Teacher, Professor Keywords
   keywords:
-      - Java
-      - C++
-      - Python
-      - Design Patterns
+      - Computer Network
+      - Analog Circuit
+      - Radio-Frequency Circuit
 
-- name: Mobile Developer Keywords
+- name: Parents Keywords
   keywords:
-      - Android
-      - Reverse Engineering
+      - Mother of two kids
+      - University
+      - Primary School
 
-- name: Windows Developer Keywords
-  keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+
