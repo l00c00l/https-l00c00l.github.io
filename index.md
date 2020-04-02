@@ -82,4 +82,4 @@
 
 2018-12-26 第一条
 
-2018-11-06  起意  https://l00c00l.github.io/LCL_Blog/
+2018-11-06  起意  https://l00c00l.github.io/Blogs/
