@@ -20,6 +20,8 @@
 
 ##高一
 
+[被家长赶出去了怎么办? ](https://www.zhihu.com/question/385244133/answer/1129748460)
+
 
 ##高二
 
