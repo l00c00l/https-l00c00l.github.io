@@ -1,5 +1,9 @@
 # 所做所思>卡片&笔记输出
 
+
+[新冠病毒溯源之争-20200411](https://www.zhihu.com/question/377152376/answer/1145387109)
+
+
 [智力与理性-三重心智模型20200404](https://zhuanlan.zhihu.com/p/125148955)
 
 
