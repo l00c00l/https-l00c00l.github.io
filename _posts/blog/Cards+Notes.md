@@ -1,6 +1,10 @@
 # 所做所思>卡片&笔记输出
 
 
+
+[工具理性 vs. 知识理性--《超越智商》20200411](https://zhuanlan.zhihu.com/p/125148955)
+
+
 [新冠病毒溯源之争-20200411](https://www.zhihu.com/question/377152376/answer/1145387109)
 
 
