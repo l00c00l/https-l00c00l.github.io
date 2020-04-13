@@ -17,6 +17,14 @@
 [所读所思](https://github.com/l00c00l/Blogs/blob/master/_drafts/LCL's_reading_notes.md)
 
 
+## ====== 加油俩宝 ====== 
+
+
+[小小博士豆](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Mini_Dr.Bean.md) 
+
+
+[天骄博士自述]( https://github.com/l00c00l/Personal-Statement-of-ZYQ)  
+
 
 ## ====== 专题文字 ====== 
 
@@ -30,12 +38,6 @@
 
 
 [懒人懒办法](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Efficiency.md)
-
-
-[小小博士豆](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Mini_Dr.Bean.md) 
-
-
- [天骄博士自述]( https://github.com/l00c00l/Personal-Statement-of-ZYQ)  
 
 
 
