@@ -11,8 +11,11 @@
 
 ## ====== 日有所得 ====== 
 
+[量化投资](https://github.com/l00c00l/LCL_Quant/blob/master/README.md)
+
 
 [积累砖块](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Cards+Notes.md)
+
 
 [所读所思](https://github.com/l00c00l/Blogs/blob/master/_drafts/LCL's_reading_notes.md)
 
