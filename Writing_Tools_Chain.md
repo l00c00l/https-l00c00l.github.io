@@ -10,7 +10,8 @@
 待写清单：Workflowy
 文字素材的收集、笔记：Zotero, Onenote
 图片等素材积累与同步：坚果云，Onedrive，google云盘
-撰写和文字编辑：Word，markdown
+半成品/中间件：卡片  如何高效实践卡片式写作
+撰写和文字编辑 / 拼接：Word，markdown
 图片处理： 搜狗输入法的截屏，irfanview
 
 
@@ -77,8 +78,6 @@ Gingko 有意思的地方在于，你可以在这个二维平面上直接拖拽�
 Gingko 中导入 Markdown 格式的内容，就很有意思。你只需要在一张卡片上粘贴全部内容后，使用 ⇧Shift+⌘Command+↩Return 键，这张卡片里的 Markdown 内容，就会根据标题的结构，自动排列成合适的若干卡片，组合在一个新枝杈上面。????
 
 2019年11月19日
-
-来自 <https://sspai.com/post/57476> 
 
 来自 <https://sspai.com/post/57476> 
 
