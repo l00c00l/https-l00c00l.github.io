@@ -1,6 +1,6 @@
-# 豆包文字电梯
+# 文字电梯
 
-@[TOC](文字电梯)
+//  @[TOC](文字电梯)
 
 
 > ---------------- /冷处理----------------
@@ -26,7 +26,7 @@
 [小小博士豆](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Mini_Dr.Bean.md) 
 
 
-[天骄博士自述]( https://github.com/l00c00l/Personal-Statement-of-ZYQ)  
+[天骄博士自述](https://github.com/PepperJao)  
 
 
 ## ====== 专题文字 ====== 
