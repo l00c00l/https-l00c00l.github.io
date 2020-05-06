@@ -3,6 +3,9 @@
 [大数据高考志愿项目](https://github.com/l00c00l/BigData_Gaokao_Assisting)
 
 
+[我的写作工具链 20200425](https://github.com/l00c00l/Blogs/blob/master/Writing_Tools_Chain.md) 
+
+
 [Python编程典型例子](https://github.com/l00c00l/python-small-examples)
 
 
