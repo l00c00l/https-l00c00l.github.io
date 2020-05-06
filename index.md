@@ -40,16 +40,23 @@
  [投资理财资源与活动](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/investment.md)
 
 
-> ----------------------------------------------------------------------------------
+> 挖坑 ----------------------------------------------------------------------------------
 
 
  [心理学资源与活动](https://github.com/l00c00l/Blogs/blob/master/_wiki/Cognitive_psychology.md)
 
+[Pepperr](https://github.com/l00c00l/Blogs/blob/master/_drafts/Dr.Pepper.md)
+
+[没骨头行为](https://github.com/l00c00l/Blogs/blob/master/_drafts/Kneeling.md)
+
+[读书笔记](https://github.com/l00c00l/Blogs/blob/master/_drafts/LCL's_reading_notes.md)
 
 > ----------------------------------------------------------------------------------
 
 
 [实践技能](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Practice.md)
+
+
 
 
 > ----------------------------------------------------------------------------------
