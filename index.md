@@ -1,4 +1,18 @@
 
+## ====== 专题文字 ====== 
+
+[我们是早上8、9点的太阳](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_kids.md) 
+
+
+[可怜天下父母心](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_parents.md) 
+
+
+[成年人的世界没有容易的事](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_adults.md) 
+
+
+[懒人懒办法](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Efficiency.md)
+
+
 ## ====== 日有所得 ====== 
 
 [量化投资](https://github.com/l00c00l/LCL_Quant/blob/master/README.md)
@@ -17,21 +31,6 @@
 
 
 [天骄博士自述](https://github.com/PepperJao)  
-
-
-## ====== 专题文字 ====== 
-
-[我们是早上8、9点的太阳](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_kids.md) 
-
-
-[可怜天下父母心](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_parents.md) 
-
-
-[成年人的世界没有容易的事](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/for_adults.md) 
-
-
-[懒人懒办法](https://github.com/l00c00l/Blogs/blob/master/_posts/blog/Efficiency.md)
-
 
 
 ## ====== 其它活动 ====== 
