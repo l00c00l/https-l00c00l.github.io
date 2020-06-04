@@ -45,6 +45,10 @@
 
 [小学阶段的孩子不爱学习没有耐心应该怎么解决？20190101](https://www.zhihu.com/question/306872545/answer/559685901)
 
+[小朋友这样记单词背古诗-20200604](https://zhuanlan.zhihu.com/p/145755602)
+
+[小学四年级数学题讨论求解过程-20200522](https://zhuanlan.zhihu.com/p/143277813)
+
 [陪孩子写作业，你会不会发狂，你是怎样辅导孩子做作业的？](https://www.zhihu.com/people/AlliMM/answers)
 
 [小学平板电脑学习有利还是有弊？ ](https://www.zhihu.com/people/AlliMM/answers) 
