@@ -74,6 +74,9 @@
 
 ## 高三
 
+[我的女儿因为我撕了她的笔记本绝食了怎么办？20200604](https://www.zhihu.com/question/398859457/answer/1263266730)
+
+
  [父亲和高三的孩子如何保持沟通，如家庭是母亲主导了孩子的思想，父母关系不好？](https://www.zhihu.com/question/313559739/answer/611320379)
  
  [工薪家庭孩子想出国读本科，家长请求知友给点建议？](https://www.zhihu.com/question/31403063)
