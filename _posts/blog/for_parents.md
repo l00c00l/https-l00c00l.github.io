@@ -26,7 +26,7 @@
 
 # 三岁前
 
-[孩子的摇摇床总是需要人晃怎么能改成自动的 不要太复杂请各位大神给个思路？]( https://www.zhihu.com/question/314402610/answer/614744984)
+[孩子的摇摇床总是需要人晃怎么能改成自动的 不要太复杂请各位大神给个思路？](https://www.zhihu.com/question/314402610/answer/614744984)
 
 
 # 幼儿园
@@ -39,9 +39,9 @@
 # 小学
 
 
-[一个不刷牙，不梳头，六年级女孩-202003](https://www.zhihu.com/answer/1113140892）
+[一个不刷牙，不梳头，六年级女孩-202003](https://www.zhihu.com/answer/1113140892)
 
-[爱抬杠的孩子引导](https://www.zhihu.com/answer/1113068587)
+[爱抬杠孩子的引导](https://www.zhihu.com/answer/1113068587)
 
 [小学阶段的孩子不爱学习没有耐心应该怎么解决？20190101](https://www.zhihu.com/question/306872545/answer/559685901)
 
@@ -62,7 +62,7 @@
 
 # 初中
 
-[父母到底该不该干涉孩子反锁房门   2019年2月8日  ](https://www.zhihu.com/question/311304598/answer/591938048)
+[父母到底该不该干涉孩子反锁房门-2019年2月8日](https://www.zhihu.com/question/311304598/answer/591938048)
 
 
 # 高中
