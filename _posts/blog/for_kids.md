@@ -33,6 +33,9 @@
 [高三一点都不紧张怎么办呢？](https://www.zhihu.com/question/314882586/answer/616467325)
 
 
+[我是一名高二的学生目前五百来分家庭情况不是很好也不是特别差请问如果在武汉读书啥大学比较适合我这个情况？20200604](https://www.zhihu.com/question/398848559/answer/1263428031)
+
+
 [抑郁症患者高考可以考多好？](https://www.zhihu.com/question/264932413/answer/593670455)
 
 
