@@ -49,7 +49,7 @@
 
 [自卑-大学宿舍，10人，8个城市孩子2020/03/29](https://www.zhihu.com/creator/analytics/work/pins)
 
-[和学生一起修改简历20200325](https://github.com/l00c00l/Notes_Cards/blob/master/CD20200325-help_writing_CV.md)
+[和学生一起修改简历20200325](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/CD20200325-help_writing_CV.md)
 
 
 
