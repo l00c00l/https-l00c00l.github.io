@@ -1,4 +1,6 @@
 
+[免费访问谷歌的方法](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/AccessGoogle.md)
+
 
 [大数据高考志愿项目](https://github.com/l00c00l/BigData_Gaokao_Assisting)
 
