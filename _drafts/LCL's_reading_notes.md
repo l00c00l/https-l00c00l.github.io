@@ -7,7 +7,7 @@
 # 教学 & 研究
 
 
-[复杂系统的核心变量20200324](https://github.com/l00c00l/Notes_Cards/blob/master/CD20200324-complex_system_core_variables.md)
+[复杂系统的核心变量20200324](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/CD20200324-complex_system_core_variables.md)
 
 
 # IT技术测试
