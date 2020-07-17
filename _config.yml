@@ -4,11 +4,10 @@
 baseurl:
 url: https://l00c00l.github.io
 date_format: "ordinal"
-title: 冷处理的文字电梯
+title: 码字
 subtitle: "公众号：AlliMM"
-description: "冷处理的个人博客，微信公众号：AlliMM"
+description: "冷处理的个人博客，公众号：AlliMM"
 keywords: 码字, 冷处理, Lilian, l00c00l, AlliMM
-timezone: Asia/Ningbo
 encoding: "utf-8"
 side_bar_repo_limit: 5
 
@@ -67,7 +66,7 @@ lsi: false
 quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
-gems:
+plugins:
     - jekyll-github-metadata
     - rouge
 #     - jekyll-html-pipeline
@@ -123,5 +122,3 @@ simple_jekyll_search:
 # ---------------- #
 google:
     analytics_id: 162427158
-
-theme: jekyll-theme-minimal

@@ -1,61 +1,56 @@
+# 豆包文字电梯
 
-## ====== 专题文字 ====== 
-
-[我们是早上8、9点的太阳](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/for_kids.md) 
-
-
-[可怜天下父母心](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/for_parents.md) 
+@[TOC](文字电梯)
 
 
-[成年人的世界没有容易的事](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/for_adults.md) 
+> ---------------- /冷处理----------------
 
 
-[懒人懒办法](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Efficiency.md)
+
 
 
 ## ====== 日有所得 ====== 
 
-[量化投资](https://github.com/l00c00l/LCL_Quant/blob/master/README.md)
+[积累砖块](https://github.com/l00c00l/l00c00l.github.io\_posts\blog\Cards+Notes.md)
+
+[所读所思](https://github.com/l00c00l/l00c00l.github.io\_drafts\LCL's_reading_notes.md)
 
 
-[积累砖块](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Cards%2BNotes.md)
+
+## ====== 专题文字 ======
+
+[我们是早上8、9点的太阳](https://github.com/l00c00l/LCL_Blog/blob/master/for_kids.md) 
+
+[可怜天下父母心](https://github.com/l00c00l/LCL_Blog/blob/master/for_parents.md) 
+
+[成年人的世界没有容易的事](https://github.com/l00c00l/LCL_Blog/blob/master/for_adults.md) 
 
 
-[所读所思](https://github.com/l00c00l/l00c00l.github.io/blob/master/_drafts/LCL's_reading_notes.md)
+[懒人懒办法](https://github.com/l00c00l/LCL_Blog/blob/master/Efficiency.md)
 
 
-## ====== 加油俩宝 ====== 
+[小小博士豆](https://github.com/l00c00l/LCL_Blog/blob/master/Mini_Dr.Bean.md) 
 
 
-[小小博士豆](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Mini_Dr.Bean.md) 
+ [天骄博士自述]( https://github.com/l00c00l/Personal-Statement-of-ZYQ)  
 
-
-[天骄博士自述](https://github.com/PepperJao)  
 
 
 ## ====== 其它活动 ====== 
 
 
- [投资理财资源与活动](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/investment.md)
+ [投资理财资源与活动](https://github.com/l00c00l/LCL_Blog/blob/master/investment.md)
 
-
-> 挖坑 ----------------------------------------------------------------------------------
-
-
- [心理学资源与活动](https://github.com/l00c00l/Blogs/blob/master/_wiki/Cognitive_psychology.md)
-
-[Pepperr](https://github.com/l00c00l/Blogs/blob/master/_drafts/Dr.Pepper.md)
-
-[没骨头行为](https://github.com/l00c00l/Blogs/blob/master/_drafts/Kneeling.md)
-
-[读书笔记](https://github.com/l00c00l/Blogs/blob/master/_drafts/LCL's_reading_notes.md)
 
 > ----------------------------------------------------------------------------------
 
 
-[实践技能](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Practice.md)
+ [心理学资源与活动](https://github.com/l00c00l/LCL_Blog/blob/master/Cognitive_psychology.md)
 
 
+> ----------------------------------------------------------------------------------
+
+[实践技能](https://github.com/l00c00l/l00c00l.github.io\_posts\blog\Practice.md)
 
 
 > ----------------------------------------------------------------------------------
@@ -69,7 +64,7 @@
 
 [国内新冠疫情时间线](https://github.com/l00c00l/wuhan2020-timeline/blob/master/%E6%97%B6%E9%97%B4%E7%BA%BFTIMELINE.md)
 
-[方方日记](https://github.com/l00c00l/Blogs/blob/master/_wiki/FF_diary.md)
+[方方日记](https://github.com/l00c00l/LCL_Blog/blob/master/FF_diary.md)
 
 > ----------------------------------------------------------------------------------
 
@@ -83,4 +78,4 @@
 
 2018-12-26 第一条
 
-2018-11-06  起意  https://l00c00l.github.io
+2018-11-06  起意  https://l00c00l.github.io/
