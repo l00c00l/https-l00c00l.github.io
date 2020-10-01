@@ -19,38 +19,36 @@
 
 ## ====== 专题文字 ======
 
-[我们是早上8、9点的太阳](https://github.com/l00c00l/LCL_Blog/blob/master/for_kids.md) 
+[我们是早上8、9点的太阳](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/for_kids.md) 
 
-[可怜天下父母心](https://github.com/l00c00l/LCL_Blog/blob/master/for_parents.md) 
+[可怜天下父母心](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/for_parents.md) 
 
-[成年人的世界没有容易的事](https://github.com/l00c00l/LCL_Blog/blob/master/for_adults.md) 
+[成年人的世界没有容易的事](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/for_adults.md) 
 
+[懒人懒办法](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Efficiency.md)
 
-[懒人懒办法](https://github.com/l00c00l/LCL_Blog/blob/master/Efficiency.md)
-
-
-[小小博士豆](https://github.com/l00c00l/LCL_Blog/blob/master/Mini_Dr.Bean.md) 
+[小小博士豆](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Mini_Dr.Bean.md) 
 
 
- [天骄博士自述]( https://github.com/l00c00l/Personal-Statement-of-ZYQ)  
+ [天骄博士]( https://github.com/PepperJao)  
 
 
 
-## ====== 其它活动 ====== 
+## ====== 其它活动 ======
 
 
- [投资理财资源与活动](https://github.com/l00c00l/LCL_Blog/blob/master/investment.md)
+ [投资理财资源与活动](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/investment.md)
 
 
 > ----------------------------------------------------------------------------------
 
 
- [心理学资源与活动](https://github.com/l00c00l/LCL_Blog/blob/master/Cognitive_psychology.md)
+ [心理学资源与活动](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Cognitive_psychology.md)
 
 
 > ----------------------------------------------------------------------------------
 
-[实践技能](https://github.com/l00c00l/l00c00l.github.io\_posts\blog\Practice.md)
+[实践技能](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog\Practice.md)
 
 
 > ----------------------------------------------------------------------------------
@@ -60,7 +58,6 @@
 [一个研究生的论文等](https://github.com/xiahouzuoxin/notes/tree/master/essays)
 
 [Python编程典型例子](https://github.com/l00c00l/python-small-examples)
-
 
 [国内新冠疫情时间线](https://github.com/l00c00l/wuhan2020-timeline/blob/master/%E6%97%B6%E9%97%B4%E7%BA%BFTIMELINE.md)
 
