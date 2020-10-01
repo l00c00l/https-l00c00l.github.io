@@ -11,9 +11,9 @@
 
 ## ====== 日有所得 ====== 
 
-[积累砖块](https://github.com/l00c00l/l00c00l.github.io\_posts\blog\Cards+Notes.md)
+[积累砖块](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/Cards%2BNotes.md)
 
-[所读所思](https://github.com/l00c00l/l00c00l.github.io\_drafts\LCL's_reading_notes.md)
+[所读所思](https://github.com/l00c00l/l00c00l.github.io/blob/master/_drafts\LCL's_reading_notes.md)
 
 
 
