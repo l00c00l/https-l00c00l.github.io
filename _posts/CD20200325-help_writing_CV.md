@@ -1,4 +1,12 @@
-
+---
+​---
+layout: post
+title:  帮学生修改简历
+categories: [教育, 知行]
+description: 酒香也怕巷子深
+keywords: 简历, 数据，细节
+​---
+---
 
 
 昨晚，一个大二的学生说想应聘[字节跳动暑期实习生招聘](https://job.bytedance.com/campus/?summary=873&city=52&q1=&position_type=%E5%AE%9E%E4%B9%A0)，想让我帮他看看简历。今天和他一起见证了四个版本的简历。

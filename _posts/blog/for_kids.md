@@ -1,5 +1,14 @@
 
 
+```
+---
+layout: post
+title: 我们，是早上8-9点的太阳~~
+categories: [人生, 成长]
+description: 总有一天，我会长大...
+keywords: 青少年, 成长
+---
+```
 
 #小学
 

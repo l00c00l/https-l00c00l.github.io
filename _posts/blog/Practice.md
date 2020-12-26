@@ -1,9 +1,19 @@
 
+
+```
+---
+layout: post
+title: 百弄生法偷个懒...
+categories: [工具, 效率]
+description: 磨刀不误砍柴工，懒人有办法
+keywords: 工具
+---
+```
+
 [免费访问谷歌的方法](https://github.com/l00c00l/l00c00l.github.io/blob/master/_posts/blog/AccessGoogle.md)
 
 
 [大数据高考志愿项目](https://github.com/l00c00l/BigData_Gaokao_Assisting)
-
 
 [我的写作工具链 20200425](https://github.com/l00c00l/Blogs/blob/master/Writing_Tools_Chain.md) 
 

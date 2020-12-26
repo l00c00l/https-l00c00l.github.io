@@ -1,5 +1,14 @@
+```
+---
+layout: post
+title: 访问谷歌不折腾
+categories: [工具, 效率]
+description: 免费版访问谷歌的方法
+keywords: 谷歌访问助手, IPV6
+---
+```
 
-# 访问谷歌不折腾
+
 
 不甘心用百度搜索，一直在探索，折腾过很多方法。
 

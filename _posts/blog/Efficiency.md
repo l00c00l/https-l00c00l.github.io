@@ -1,6 +1,14 @@
 
 
-
+```
+---
+layout: post
+title: 高效率慢生活
+categories: [工具, 效率]
+description: 偷得半日闲
+keywords: 工具, 效率
+---
+```
 
 [访问谷歌不折腾-大概率保证访问谷歌的方法](https://github.com/l00c00l/LCL_Blog/blob/master/AccessGoogle.md)
 

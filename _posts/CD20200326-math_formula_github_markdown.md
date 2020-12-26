@@ -1,21 +1,29 @@
-
+---
+​---
+layout: post
+title:  github上怎样搞定数学公式？
+categories: [工具, 效率]
+description: Typora能自动显示公式，什么时候github会支持呢
+keywords: markdown, 公式，输入，Latex
+​---
+---
 
 h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
-   
+
 
 > =============================================      
 
-   
+
 ![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a})
-   
 
 
-   
+
+
 > -----------------------------------------
-   
-      
+
+
    The state variables for the CartPole was the following: 
-   
+
 \\begin{equation} \\begin{bmatrix} x & \\dot{x} & \\theta & \\dot{\\theta} & L & m & M \\end{bmatrix} \\end{equation}
 The actions alowed was choosen from the force vector: 
 
@@ -26,7 +34,7 @@ The actions alowed was choosen from the force vector:
 
 
 The state variables for the CartPole was the following: 
-   
+
    \begin{equation} \begin{bmatrix} x & \dot{x} & \theta & \dot{\theta} & L & m & M \end{bmatrix} \end{equation}
 The actions alowed was choosen from the force vector: 
 
@@ -34,11 +42,11 @@ The actions alowed was choosen from the force vector:
 
 
 > =============================================   
+
    
-   
-   
+
    <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-   
+
 
 > =============================================   
 

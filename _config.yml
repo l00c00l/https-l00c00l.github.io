@@ -25,14 +25,6 @@ email: cuilian.li@gmail.com
 #    Navigation    #
 # ---------------- #
 navs:
-  -
-    href: /
-    label: 首页
-
-  -
-    href: /categories/
-    label: 分类
-
 #   -
 #     href: /archives/
 #     label: 归档
@@ -48,6 +40,7 @@ navs:
   -
     href: /about/
     label: 关于
+
 
 # ---------------- #
 #       RSS        #
@@ -107,6 +100,10 @@ gitalk:
     clientSecret: 6831f03cd6293da5b3dec5e784a0b5e82d9bae8f
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
+
+# 添加category内容
+#分类: "https://l00c00l.github.io/categories/"
+permalink: /:categories/:title/
 
 # ---------------- #
 #      Search      #

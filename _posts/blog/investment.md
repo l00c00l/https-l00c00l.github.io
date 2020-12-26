@@ -1,3 +1,13 @@
+```
+---
+layout: post
+title: 学着理财
+categories: [理财, 滚雪球]
+description: 你不理财，财不理你
+keywords:指数基金, ETF, 网格
+---
+```
+
 
 
 [E大长赢150在2020年三月份的仓位占比20200327](https://github.com/l00c00l/Notes_Cards/blob/master/CD20200327-math_formula_howto.md)

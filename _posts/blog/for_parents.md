@@ -1,3 +1,12 @@
+```
+---
+layout: post
+title: 上辈子，你是我祖宗！
+categories: [人生, 生活]
+description: 自己都还没有长大，却不得不教育别人...
+keywords: 亲子, 家庭教育
+---
+```
 
 # 亲子
 
@@ -82,7 +91,7 @@
 
 
  [父亲和高三的孩子如何保持沟通，如家庭是母亲主导了孩子的思想，父母关系不好？](https://www.zhihu.com/question/313559739/answer/611320379)
- 
+
  [工薪家庭孩子想出国读本科，家长请求知友给点建议？](https://www.zhihu.com/question/31403063)
 
 

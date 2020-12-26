@@ -25,6 +25,7 @@ layout: default
   </div>
 </div>
 </section>
+
 <!-- / .banner -->
 <section class="container content">
 <div class="columns">
@@ -48,3 +49,33 @@ layout: default
 </div>
 </section>
 <!-- /section.content -->
+
+ <!--文章尾部添加tags-->
+      {\%\if page.tags.size > 0 \%\}
+        <div class="blog-tags">
+          Tags:
+          {\%\if site.link-tags \%\}
+          {\%\for tag in page.tags \%\}
+            <a href="\{\{ '/tags' | relative_url \}\}#\{\{- tag -\}\}">\{\{- tag -\}\}</a>
+          {\%\endfor \%\}
+          {\%\else \%\}
+            \{\{ page.tags | join: ", " \}\}
+          {\%\endif \%\}
+        </div>
+      {\%\endif \%\}
+
+	<!--添加分类-->
+	 {\%\if page.categories.size > 0 \%\}
+		  <div class="blog-tags">
+		  Category：
+		{\%\if post \%\}
+			{\%\assign categories = post.categories \%\}
+		{\%\else \%\}
+			{\%\assign categories = page.categories \%\}
+		{\%\endif \%\}
+		{\%\for category in categories \%\}
+			<a href="\{\{site.baseurl\}\}/categories/#\{\{category|slugize\}\}">\{\{category\}\}</a>
+			{\%\unless forloop.last \%\}&nbsp;{\%\endunless \%\}
+			{\%\endfor \%\}
+		</div>
+	{\%\endif \%\}

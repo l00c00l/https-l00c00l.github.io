@@ -1,4 +1,12 @@
-
+---
+​---
+layout: post
+title:  github上怎样搞定数学公式？-中文版
+categories: [工具, 效率]
+description: Typora能自动显示公式，什么时候github会支持呢
+keywords: markdown, 公式，输入，Latex
+​---
+---
 
 
 标记支持内联HTML。内联HTML既可以用于快速简单的内联公式，也可以用于更复杂的外部工具呈现。

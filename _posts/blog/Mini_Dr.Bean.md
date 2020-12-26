@@ -1,6 +1,14 @@
+```
+---
+layout: post
+title: Iris成长足迹
+categories: [人生, 亲子]
+description: 愿你开心快乐，愿你胆大心细，愿你智勇双全，愿你成长为自己喜欢的样子
+keywords: 作文, 涂鸦，日志
+---
+```
 
 # [赵雨虹简历](https://github.com/l00c00l/cv/blob/gh-pages/README.md)
-
 
 # 作文
 
