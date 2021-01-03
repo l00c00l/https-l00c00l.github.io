@@ -1,0 +1,36 @@
+{
+    "created_time": "2021-01-03T10:48:40Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "boxed-group.css",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "collection.css",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "repo-card.css",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "0",
+    "version": "1"
+}
