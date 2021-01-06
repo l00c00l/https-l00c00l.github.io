@@ -18,3 +18,6 @@
 
 ![大盘&两融余额历史最高点与最低点](vx_images/2957417166606.jpg)
 
+
+[两融资金](http://finance.sina.com.cn/stock/s/2017-10-11/doc-ifymuukv1715082.shtml)
+![两融余额-A股大盘](vx_images/5706254159275.jpg)
