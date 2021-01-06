@@ -42,7 +42,8 @@ VNote可以代替Typora?！
 
 ### undo与redo-撤销最后修改的功能？！  
 ctrl-Z可以
-但ctrl-shift-Z不可以，也没有找到菜单或功能键
+但ctrl-shift-Z不可以，也没有找到菜单或功能键！
+右键菜单里看到了，是ctrl +Y !
 
 ## 了解VNote特色
 VNote使用笔记本、文件夹和笔记层次结构进行笔记管理。
@@ -74,9 +75,11 @@ Today is 20180128
 1\name=vnote
 1\definition="vnote is a great tool! -- Written %datetime%"
 
+## PlantUML、Graphviz、Mermaid 和Flowchart 四种文本绘图格式
+
 ### mermaid & flowchart ?!
 
-据说这两个都是绘图插件...
+据说这两个都是绘图插件，VNote可以直接预览，但github似乎不支持？！
 
 mermaid流程图的定义仅由graph开始，但是方向的定义不止一种。
 
@@ -114,9 +117,99 @@ cond(no)->sub1(right)->op1
 
 ### puml是什么？
 
-`ctrl-e i`打开实时预览，双击 puml 代码块里面某个类名之类的，预览里面会对应高亮相关元素**
+PlantUML
+`ctrl-e i`打开实时预览，双击 puml 代码块里面某个类名之类的，预览里面会对应高亮相关元素
+
 把限制宽度去掉，按住 ctrl 拖动鼠标就能平移查看预览或图片，ctrl-j/k 上下移动。
+
 一边读源码, 一边用 puml 简单的语法记笔记, vnote 原地预览出 uml 图, 感觉效率非常高
+
+```puml
+@startuml
+Bob -> Alice : hello
+@enduml
+```
+
+
+```puml
+@startuml
+用户 -> 认证中心 : 登录操作
+认证中心 -> 缓存 : 存放(key=token+ip,value=token)token
+用户 <- 认证中心  : 认证成功返回token
+用户 -> 认证中心 : 下次访问头部携带token认证
+认证中心 <- 缓存 : key=token+ip获取token
+其他服务 <- 认证中心 : 存在且校验成功则跳转到用户请求的其他服务
+其他服务 -> 用户 : 信息
+@enduml
+```
+
+
+### Graphviz
+
+其它三个画图插件不需要任何配置，vnote直接就可以把代码渲染出图形，但这个没反应？！
+
+graphviz 图实体主要分三类：
+1）**digraph** {...} 定义有向图；
+2）**graph** {...}定义无向图；
+3) **subgraph{...}** 定义子图；
+
+[“设置 vnote，配置界面如下”](https://zhuanlan.zhihu.com/p/208476690)
+最新版VNote貌似设置界面简化了很多。这些配置也许都转移到配置文件中了？网上很多经验都过期了，估计只能看官方V3.0的最新说明了。
+已经下载安装了graphviz，得到“C:\Program Files\Graphviz 2.44.1\bin\dot.exe”，暂时不知如何修改VNote中的相关配置。
+
+刚才VNote出现卡死（？不肯定，反正ctrl-j,k没反应），关闭重新打开后，打开这个文档，在阅读模式下，突然注意到，这一段的**dot绘图代码都成功显示出图形了！
+只要安装了graphviz，无需配置，自动支持？！ 
+但是，在编辑模式下，其它三种绘图插件都显示图形，这个不显示。**
+
+
+```dot
+digraph G {
+A -> B
+B -> C
+B -> D
+}
+```
+
+```dot
+digraph G {
+size="4,4";
+main [shape=box];/*注释*/
+main -> parse[weight=8];
+parse -> execute;
+main -> init [style=dotted];
+main -> cleanup;
+execute -> {makestring; printf}
+init -> makestring;
+edge [color=red];
+main -> printf[style=bo1d,label="100 times"];
+make_string[label="make a\nstring"];
+node [shape=box,style=filled,color=".7 .3 1.0"J;
+execute -> compare;
+}
+```
+
+```dot
+digraph finite_state_machine {
+	rankdir=LR;
+	size="8,5"
+	node [shape = doublecircle]; LR_0 LR_3 LR_4 LR_8;
+	node [shape = circle];
+	LR_0 -> LR_2 [ label = "SS(B)" ];
+	LR_0 -> LR_1 [ label = "SS(S)" ];
+	LR_1 -> LR_3 [ label = "S($end)" ];
+	LR_2 -> LR_6 [ label = "SS(b)" ];
+	LR_2 -> LR_5 [ label = "SS(a)" ];
+	LR_2 -> LR_4 [ label = "S(A)" ];
+	LR_5 -> LR_7 [ label = "S(b)" ];
+	LR_5 -> LR_5 [ label = "S(a)" ];
+	LR_6 -> LR_6 [ label = "S(b)" ];
+	LR_6 -> LR_5 [ label = "S(a)" ];
+	LR_7 -> LR_8 [ label = "S(b)" ];
+	LR_7 -> LR_5 [ label = "S(a)" ];
+	LR_8 -> LR_6 [ label = "S(b)" ];
+	LR_8 -> LR_5 [ label = "S(a)" ];
+}
+```
 
 本来打算用坚果云同步VNote笔记，突然又一个念头：要么
 ## 直接将VNote笔记同步到github上？！
@@ -126,13 +219,26 @@ cond(no)->sub1(right)->op1
 
 
 ## 一次排版可以放在好多个平台？！
+期待，希望自己能尽快实现这个。
+
+
+## 问题与解决
+
+1） [手动重构笔记本之后无法识别笔记本
+](https://github.com/vnotex/vnote/issues/1563)
+刚开始接触。
+在建立根文件夹以后复制进来一个vnote1.md，也在VNote中打开编辑过两次，但是，在vnote里一直看不到这个文件！
+这个问题，大概跟题主说的是同一个问题？
+还有，vnote里看不到最近打开文件？有点点不适应。
+2）不知是否graphviz的原因，现在VNote在浏览模式下，无法滚动页面--而且CPU发出一种负重的声音。切换回编辑模式，立马好了。没有安装graphviz之前，没有发现这个问题。
+
 
 ## 参考资料
 > [VNote创作者的介绍及问答](https://www.v2ex.com/t/570883)
 
 > [VNote指南](https://vnote.readthedocs.io/zh_CN/latest/user_docs/template.html)
 
-> [VNote github](https://tamlok.github.io/vnote/zh_cn/)
+> [VNote github--奇怪，这个打不开了](https://tamlok.github.io/vnote/zh_cn/)
 
 > [可同步的markdown笔记软件讨论](https://www.v2ex.com/t/648954#reply127)
 
@@ -141,6 +247,12 @@ cond(no)->sub1(right)->op1
 > [vnote + github](https://blog.diqigan.cn/posts/build-your-personal-notebook-with-vnote.html)
 
 > [mermaid绘图插件](https://blog.csdn.net/Subson/article/details/78054689)
+
+> [graphviz-install-2.44.1-win64.exe](https://www2.graphviz.org/Packages/stable/windows/10/cmake/Release/x64/graphviz-install-2.44.1-win64.exe)
+
+> [Graphviz与VNote](https://c.m.163.com/news/a/FKO20APH0526W5Q0.html)
+
+> [Graphviz-digraph](https://github.com/vnotex/vnote/issues/239)
 
 > [VNote的图片管理功能！](https://www.hitdn110.club/2019/12/485.html)
 
