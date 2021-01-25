@@ -1,0 +1,48 @@
+{
+    "created_time": "2021-01-03T10:48:40Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "octicons-bg.png",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "octocat-spinner-16px.gif",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "octocat-spinner-32-EAF2F5.gif",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2021-01-03T10:48:40Z",
+            "id": "0",
+            "modified_time": "2021-01-03T10:48:40Z",
+            "name": "qrcode.jpg",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "screenshots"
+        }
+    ],
+    "id": "0",
+    "version": "1"
+}

@@ -1,0 +1,121 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl: /l00c00l.github.io
+url: https://l00c00l.github.io
+date_format: "ordinal"
+title: 雁过...留声
+subtitle: "公众号：AlliMM"
+description: "冷处理的个人博客，公众号：AlliMM"
+keywords: 码字, 冷处理, Lilian, l00c00l, AlliMM
+encoding: "utf-8"
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Li Cuilian
+organization: 
+organization_url: 
+github_username: l00c00l
+location: Ningbo, China
+email: cuilian.li@gmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+#   -
+#     href: /archives/
+#     label: 归档
+
+  -
+    href: /wiki/
+    label: 维基
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 10
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+plugins:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: mzlogin/mzlogin.github.io
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: 
+    repo: 
+    oauth:
+        client_id: 
+        client_secret: 
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: l00c00l
+    repo: blog-comments
+    clientID: babd8c67595b9a44177f
+    clientSecret: 6831f03cd6293da5b3dec5e784a0b5e82d9bae8f
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# 添加category内容
+#分类: "https://l00c00l.github.io/categories/"
+permalink: /:categories/:title/
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: 162427158
