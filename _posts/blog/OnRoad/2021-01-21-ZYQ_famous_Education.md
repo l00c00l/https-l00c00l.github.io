@@ -1,3 +1,66 @@
+---
+layout: post
+title: 仰慕向往的人和所在... 
+categories: [传记, 修炼]
+description: 纵不能至，心向往之
+keywords: 传记, 修炼
+---
+------------------------------------------------
+
+# 行业 企业
+
+Neuralink2017年3月成立。 https://neuralink.com/careers/
+
+https://www.glassdoor.com/Reviews/Neuralink-Reviews-E1616853.htm 这里有员工点评
+https://www.reddit.com/r/Neuralink/comments/ck3ksr/is_neuralink_a_good_place_to_work/
+
+
+https://zhuanlan.zhihu.com/p/205171020 实验小猪的视频
+
+OwlLite--中国科学院大学 模式识别与智能系统博士  神经科学、脑科学 话题的优秀答主 https://www.zhihu.com/question/418085084  蚂蚁金服招人
+
+
+20210201，马斯克的脑机接口公司 Neuralink https://mp.weixin.qq.com/s/0kO81AvODY-LR5aXjvXHpA
+
+匹兹堡大学的Andrew schwartz的成果，脑控机械手
+
+
+李明骏-字节跳动 AI产品经理
+关键是脑和机输入输出语言不通，语言不通主要是脑科学在拖后腿 https://zhuanlan.zhihu.com/p/76666637 2019-08-05
+VR交互的最大障碍，虚拟触觉，除了脑机接口没有第二条路可以走。
+VR 已经有触感手套了。 交互的话不一定要调动所有的感觉。接口也只是连接皮层很小的部分，在本质上也是有信息缺失的问题。
+我的观点就是是人机交互比人机接口要有前途。 ???
+脑际接口用于解码大脑的输出信息，用来帮助残障人士是非常适合的。
+
+
+Big brother2019-07-22  https://www.zhihu.com/question/335378600
+马斯克工作基本上是基于Chong Xie团队的science advance, advance science 的两篇论文。???
+
+脑电这玩意儿就像在场外听球场人的欢呼声猜测球踢得怎么样一样，太多未知了，前路漫漫。
+
+https://mp.weixin.qq.com/s/9-UBKdd5gfNabj5SSDCEQw 2019-07-19
+宾夕法尼亚大学神经科学系科丁实验室社交媒体账号评价说：“没有什么革命性进展，只是包含了一系列非常有创意的想法。”
+
+## 脑机接口的研究困境
+* 工程上的突破
+巴西世界杯——外骨骼机械战甲，涉及的机械动力学、机器学习、神经科学、认知科学、信息工程等一大票学科。
+降低成本这种事情更多的就需要企业家来和实验室进行协作了。这便是商业机会。
+* 原理上的突破：
+从脑到机已经有了一些头绪了，从机到脑却几乎是没什么头绪。
+神经科学在单神经元的研究也算是逐渐明朗了，但可惜的是而大脑各种神奇之处根本无法用还原论的方式去解释。用整体论的系统思维去解释又过于复杂，而复杂性科学又长期没什么发展，系统思维的研究方向虽然常常日新月异，却总感觉还是在雾里看花。
+
+1.VR方向：
+MindMaze：成立于2012年
+Neurable：
+2.医疗方向：
+“强化”和“恢复”，这两个方向
+
+https://zhuanlan.zhihu.com/p/205171020
+> “如果你不能打败他们，那就加入他们。”——Elon Musk。
+> 自我非我，我非自我！这可能就是未来！--Space Doctor。
+发布于 2020-08-29
+
+
 # 名人 名校 培养
 
 
