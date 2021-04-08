@@ -1,63 +1,10 @@
 {
-    "created_time": "2021-01-03T10:48:40Z",
+    "created_time": "2021-03-02T09:54:17Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2021-01-03T10:48:40Z",
-            "id": "0",
-            "modified_time": "2021-01-03T10:48:40Z",
-            "name": "octicons-local.ttf",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-01-03T10:48:40Z",
-            "id": "0",
-            "modified_time": "2021-01-03T10:48:40Z",
-            "name": "octicons.css",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-01-03T10:48:40Z",
-            "id": "0",
-            "modified_time": "2021-01-03T10:48:40Z",
-            "name": "octicons.eot",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-01-03T10:48:40Z",
-            "id": "0",
-            "modified_time": "2021-01-03T10:48:40Z",
-            "name": "octicons.svg",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-01-03T10:48:40Z",
-            "id": "0",
-            "modified_time": "2021-01-03T10:48:40Z",
-            "name": "octicons.ttf",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-01-03T10:48:40Z",
-            "id": "0",
-            "modified_time": "2021-01-03T10:48:40Z",
-            "name": "octicons.woff",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
     "id": "0",
+    "modified_time": "2021-03-02T09:54:17Z",
     "version": "1"
 }
