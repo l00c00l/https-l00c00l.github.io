@@ -6,8 +6,324 @@ description: Python自学总结
 keywords: Python, 学习, 记录
 ---
 
+[TOC]
+
+面试7  https://www.cnblogs.com/crazymagic/articles/8032609.html 
+
+# IO编程  https://www.liaoxuefeng.com/wiki/1016959663602400/1017606916795776
+
+## 操作文件和目录
+
+- all functions from posix or nt, e.g. unlink, stat, etc.
+- os.path is either posixpath or ntpath
+- os.name is either 'posix' or 'nt'
+- os.curdir is a string representing the current directory (always '.')
+- os.pardir is a string representing the parent directory (always '..')
+- os.sep is the (or a most common) pathname separator ('/' or '\\')
+- os.extsep is the extension separator (always '.')
+- os.altsep is the alternate pathname separator (None or '/')
+- os.pathsep is the component separator used in $PATH etc
+- os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
+- os.defpath is the default search path for executables
+- os.devnull is the file path of the null device ('/dev/null', etc.)
+
+os.path
+    (e.g., split and join)
+
+### with语句 【】???
+https://www.jianshu.com/p/20fd3335648a
+
+自动帮我们调用close()方法： ???
+
+with open('/path/to/file', 'r') as f: 
+    print(f.read())
+
+忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：with open('/Users/michael/test.txt', 'w') as f:
+f.write('Hello, world!')
 
 
+##### shutil模块
+提供了copyfile()的函数，你还可以在shutil模块中找到很多实用函数，它们可以看做是os模块的补充。
+
+##### os.path.join()函数
+把两个路径合成一个时，不要直接拼字符串，而要通过os.path.join()函数，这样可以正确处理不同操作系统的路径分隔符。在Linux/Unix/Mac下，os.path.join()返回这样的字符串：part-1/part-2   而Windows下会返回这样的字符串：part-1\part-2   
+
+
+##### python如何获取windows管理员权限（一） 
+https://blog.csdn.net/qq_17550379/article/details/79006655
+
+### file-like Object    ???
+除了file外，还可以是内存的字节流，网络流，自定义流等
+
+文本文件：
+二进制文件：
+
+### 要读取非UTF-8编码的文本文件，需要给open()函数传入encoding参数
+
+### 采取一些方式使得\不被解读为转义字符。目前有3个解决方案
+
+1、在路径前面加r，即保持字符原始值的意思。
+
+sys.path.append(r'c:\Users\mshacxiang\VScode_project\web_ddt')
+
+2、替换为双反斜杠
+
+sys.path.append('c:\\Users\\mshacxiang\\VScode_project\\web_ddt')
+
+3、替换为正斜杠
+
+sys.path.append('c:/Users/mshacxiang/VScode_project/web_ddt')
+
+for line in f.readlines():
+    print(line.strip()) # 把末尾的'\n'删掉    ???
+
+### StringIO要么用来读，要么用来写，不能同时用 ???
+
+
+
+
+
+
+
+
+
+
+#### 什么时候用encoding=''，什么时候用encode()啊？在读取文件的时候，只能用前面的格式，在使用BytesIO时，只能用第二种格式，请大佬们解惑
+Created at July 23, 2020 11:58 PM
+encode()是str的一个方法，‘中文’.encode()，是将‘中文’这个字符串，变成了bytes；
+encoding=''，是open()函数中的一个参数。
+
+
+# 杨辉三角 ??? 巧妙利用 [-1]索引
+https://www.liaoxuefeng.com/discuss/969955749132672/1072552447308480?page=1
+生成器 https://www.liaoxuefeng.com/wiki/1016959663602400/1017318207388128
+
+在下有枪 #1 Created at 2016/3/16 16:41
+def yanghui():
+    N = [1]
+    while True:
+        yield N
+        N.append(0)
+        N = [N[i-1] + N[i] for i in range(len(N))]
+
+
+【上面代码会报错：SyntaxError: 'yield' outside function；添加了def 后不报错了，但不知怎样输出？试了下
+>>> yanghui()
+<generator object yanghui at 0x02E2D8D0>
+>>> print(yanghui())
+<generator object yanghui at 0x02FF89F0>
+>>> print(list(yanghui()))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 6, in yanghui
+  File "<stdin>", line 6, in <listcomp>
+MemoryError
+】
+
+最开始是 N【1】 然后 N.append(0) 就变成了 【1，0】 那个循环长度为2
+那么第一次 新N【0】=N【-1】+N【0】=1（N【-1】就是倒数最后一个元素） 第二次 新N【1】=N【0】+ N【1】=1 所以此时的N 就是 【1，1】
+以此类推 第二排 N=【1，1，0】（循环次数等于长度）
+第一次循环 新N【0】=N【-1】+N【0】=1 新N【1】=N【0】+N【1】=2 新 N【2】=N【1】+N【2】=1 嗯，大概就是这意思
+
+
+思考了一下怎么想到的： 大概是：观察下行中间数字，等于上行头顶两个元素相加，同时想着索引，发现都是Below[n]=Above[n-1]+Above[n],将这一规律推及到Below行的第一个和最后一个套用，进而推算只需补一个0即可。
+总之，数学中的归纳演绎方法，欠缺的不全，使规律统一。
+惊叹别人的才智之余，思考背后的思维方法也许才是最重要的。
+
+写的真好，但是不喜欢。他巧妙的利用了-1位索引在pyghon里也不产生错误，而且恰好值是0, 所以不影响结果。 其实不管最后一位的值是多少压根就不该去加，这样只能引起误解也减少代码可读性。 应该写成：
+
+N = [1]+[N[i-1] + N[i] for i in range(1, len(N))]
+
+# 调试 https://www.liaoxuefeng.com/wiki/1016959663602400/1017598814713792
+
+* print()  ==  断言（assert）但 可以关闭
+* logging：不会抛出错误，而且可以输出到文件，允许你指定记录信息的级别，有debug，info，warning，error等几个级别；可以同时输出到不同的地方
+* Python的调试器pdb：python -m pdb err.py
+* pdb.set_trace()
+* IDE
+
+
+* 
+#  http://tushare.org/fundamental.html
+Python股票历史数据的获取  https://www.cnblogs.com/tan2810/p/12050651.html
+csv格式 https://www.cnblogs.com/xiao-apple36/p/9188236.html
+
+
+ pip install dash
+
+查看股票K线.py
+stockszA.csv
+
+Successfully installed Flask-2.0.1 Werkzeug-2.0.1 brotli-1.0.9 click-8.0.1 colorama-0.4.4 dash-1.20.0 dash-core-components-1.16.0 dash-html-components-1.1.3 dash-renderer-1.9.1 dash-table-4.11.3 dataclasses-0.8 flask-compress-1.9.0 future-0.18.2 itsdangerous-2.0.1 plotly-4.14.3 retrying-1.3.3
+WARNING: You are using pip version 21.0.1; however, version 21.1.1 is available.
+You should consider upgrading via the 'c:\program files (x86)\python36-32\python.exe -m pip install --upgrade pip' command.
+
+#20210527
+
+#  这是主函数。https://zhuanlan.zhihu.com/p/38051615
+
+
+
+一个python文件通常有两种使用方法，第一是作为脚本直接执行，第二是 import 到其他的 python 脚本中被调用（模块重用）执行。
+
+
+
+因此 if __name__ == 'main': 的作用就是控制这两种情况执行代码的过程。
+
+
+
+在 if __name__ == 'main': 下的代码只有在第一种情况下（即文件作为脚本直接执行）才会被执行，而 import 到其他脚本中是不会被执行的。
+
+
+
+这里的if __name__ == '__main__':就是用来判断上述情况的，下面的
+
+script1_1 = Ping()
+
+是创建了一个Ping类的对象，然后就可以触发程序运行了。
+
+
+
+因此，这两句话应该是不能没有的哟~
+# 董付国_厦门大学_Python课程建设经验与教学方法.pdf
+Python模块与教学方向20210415145840.jpg
+
+# python encode decode utf8 ascii unicode bytes
+
+
+
+# Python中字符串前“b”,“r”,“u”,“f”  \u \x \b 【】
+https://blog.csdn.net/gymaisyl/article/details/85109627    https://www.jianshu.com/p/220ee0f219c6    https://www.jb51.net/article/176601.htm
+https://blog.csdn.net/huangjin0507/article/details/79863057
+
+
+Unicode decode encode.jpg
+UTF-8 UTF-16 UTF32.png
+
+https://blog.csdn.net/u012063703/article/details/50035805
+https://www.dokry.com/7124
+https://www.josedomingo.org/pledin/2017/02/codificacion-de-caracteres-en-python2/
+
+
+b'...'表示法有些混乱，因为它允许用ASCII字符而不是十六进制数字指定字节0x01-0x7f。
+>>> b'A' == b'\x41'
+True
+但我必须强调，字符不是字节。
+>>> 'A' == b'A'
+False
+
+要注意区分'ABC'和b'ABC'【】，前者是str，后者虽然内容显示得和前者一样，但bytes的每个字符都只占用一个字节。
+>>> '中文'.encode('ascii')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+
+
+>>> bb=b'ABC一'
+  File "<stdin>", line 1
+SyntaxError: bytes can only contain ASCII literal characters.
+
+
+## python3.3 unicode(encode&decode)
+
+https://www.cnblogs.com/ttltry-air/p/3325543.html
+
+
+
+
+## Unicode, UTF-8, UTF-16, UTF-32, UCS-2, UCS-4
+https://www.cnblogs.com/malecrab/p/5300503.html
+
+计算机是美国人发明的，因此，最早只有127个字符被编码到计算机里，也就是大小写英文字母、数字和一些符号，这个编码表被称为ASCII编码。
+比如大写字母A的编码是65，小写字母z的编码是122。
+但是要处理中文显然一个字节是不够的，至少需要两个字节，而且还不能和ASCII编码冲突，所以，中国制定了GB2312编码，用来把中文编进去。
+你可以想得到的是，全世界有上百种语言，日本把日文编到Shift_JIS里，韩国把韩文编到Euc-kr里，各国有各国的标准，就会不可避免地出现冲突??，结果就是，在多语言混合的文本中，显示出来会有乱码。
+
+
+## Unicode in Python
+https://stackoverflow.com/questions/13095499/unicode-in-python-just-utf-16
+
+
+in 3.3, with the implementation of PEP 393. Now, Unicode strings are represented using characters wide enough to hold the largest code point -- 8 bits for ASCII strings, 16 bits for BMP strings, and 32 bits otherwise. This does away with the wide/narrow divide and also helps reduce the memory usage when many ASCII-only strings are used.【】
+
+================
+	字符0用ASCII编码是十进制的48，二进制的00110000 
+字符'0'和'\0',及整数0  https://www.jianshu.com/p/011e21a20833
+整数0：0x0000—[]不属于ASCII ??。
+
+#coding=utf-8
+import sys 
+import urllib
+
+a=u"汉"
+print(type(a))  #<type 'unicode'>
+print(len(a))   #1
+print(repr(a))  #u'\u6c49'   【repr()???】
+
+b="汉"
+print(type(b))  #<type 'str'>
+print(len(b))   #3
+print(repr(b))  #'\xe6\xb1\x89'
+
+s2 = b.decode('UTF-8')
+print(s2)              #汉
+print(type(s2))       #<type 'unicode'>
+
+s3 = a.encode('UTF-8')
+print(s3)            #汉
+print(type(s3))     #<type 'str'>
+
+#### 	win中文环境中对应的系统参数
+https://www.cnblogs.com/ttltry-air/p/3325543.html
+通常，在没有指定特定的编码方式时，都是使用的系统默认编码【】???创建的代码文件
+
+>>> import sys
+>>> import locale
+>>> import codecs
+print('<strong>python系统参数：')
+print(locale.getdefaultlocale()) #('zh_CN', 'cp936')
+print(locale.getpreferredencoding()) # cp936
+print(sys.getdefaultencoding()) #utf-8
+print(sys.getfilesystemencoding())#utf-8
+print(sys.maxunicode)# 1114111
+print(codecs.lookup('utf-8'))#<codecs.CodecInfo object for encoding utf-8 at 0x3403ea0>
+
+
+#### python3读取 UCS-2 little endian(utf-16-le) 小端 格式的文件
+https://www.jianshu.com/p/0e2d32a61b69
+
+unicode编码与字符之间具有一一对应关系，但不涉及储存，只是字符的标识；**UTF8、utf-16、ucs-2和utf-32编码既与字符之间具有一一对应关系，也是具体的储存方式。**
+
+**用多个字节来表示一个字符，会涉及到要区分文件的字节序**。unicode也为BOM专门腾出了1个码点U+FEFF，处于基本多语言平面：
+U+FEFF，**BOM(Byte order mark)**，字节顺序标记，又称为zero width no-break space。出现在文本文件头部.
+* 码点U+FEFF的utf-32**大端编码**是0x0000 FEFF，所以以0x0000 FEFF开头的文件是大端utf-32文件；码点U+FEFF的utf-32小端编码是0xFFFE 0000，所以以0xFFFE 0000开头的文件是**小端utf-32**文件。
+ 
+FEFF 在UCS 中是不存在的字符?? 【这里的两段文字例子，粘贴到QQ聊天框中，第一段“以下示例中，相邻两个不同的单词之间夹有一个零宽空格”会看到空格，但点了发送以后，空格不显示了！】https://zh.wikipedia.org/wiki/%E9%9B%B6%E5%AE%BD%E7%A9%BA%E6%A0%BC
+UTF-16 and UTF-32 require a byte order mark to indicate whether the high byte or low byte comes first. UTF-8 is byte-oriented format and the standard requires it to be the same on both little endian and big endian systems.
+
+需要分析邮件数据，将邮件保存本地为html的文件
+将windows端的html文件上传到linux，通过vim的:set fileencoding命令查看文档是utf-16-le编码的
+
+import os
+import codecs
+from bs4 import BeautifulSoup
+def parseFile(filepath):
+    try:
+        with open(filepath, 'r') as fp:
+                encoding = 'utf-16-le'
+                with codecs.open(filepath, 'r', encoding) as fp2:
+                     soup = BeautifulSoup(fp2,'lxml')
+                     print(soup)                
+    except Exception,ex:
+        print '[ERROR]--',ex
+ 
+if __name__ == '__main__':
+    filepath = './Signature.txt'
+    parseFile(filepath)
+
+-----------------------------------
+
+python 中 str其实是字节串, unicode才是真正意义上的字符串【】???
 
 ## Python excel  办公自动化
 
@@ -230,6 +546,9 @@ Python考试是40分的选择题(包括Python的知识点和计算机基础)+60�
 
 
 ### IDLE vs. Pycharm
+
+####  Pycharm用鼠标滚轮控制字体大小的一、pycharm字体放大的设置File —> setting —> Keymap —>在搜寻框中输入：increase —> Increase Font 
+
 Python 3.5自带了一个解释器IDLE用来执行.py脚本，但是却不利于我们书写调试大量的代码。常见的是用notepade++写完脚本，再用idle来执行，但却不便于调试。
 
 完全的零基础，不妨把 IDLE 做一个过渡，直到掌握了基础概念，比如
@@ -286,11 +605,11 @@ Python3新特性：
 3 Value Keywords: True, False, None??
 5 Operator Keywords: and, or, not, in, is??
 3 Control Flow Keywords: if, elif, else
-5-1 Iteration Keywords: for, while, break, continue, else!!
-6-1 Structure Keywords: def, class, with??, as??, pass, lambda??
-2 Returning Keywords: return, yield??
+5-1 Iteration Keywords: for, while, break, continue, else【???】
+6-1 Structure Keywords: def, class, with??, as, pass, lambda【???】
+2 Returning Keywords: return, yield??【】
 3 Import Keywords: import, from, as
-6-1 Exception-Handling Keywords: try, except, raise, finally, else, assert
+6-1 Exception-Handling Keywords: try, except, raise, finally, else【】, assert
 2 Asynchronous Programming Keywords: async, await
 3 Variable Handling Keywords: del, global, nonlocal
 
@@ -367,7 +686,7 @@ x = int(x == 'true')     ||   ??
 int() turns the boolean into 1 or 0. Note that any value not equal to 'true' will result in 0 being returned.
 
 If B is a Boolean array, write
-B = B*1    ??
+B = B*1    【】??
 
 
 ### 默认的逻辑运算符顺序 ??
@@ -411,6 +730,24 @@ sys.float_info
 import decimal
 该标准库提供高精度浮点数运算。用法decimaI.Decimal('3.141592653')计算，因此，如果希望获得精度
 由于Python语言能够攴持无制且准确的更高的计算结果，往往采用邾数而不直接采用浮点数！???【】
+
+### 【】整数、浮点数相等的判断????
+>>> x=2
+>>> y=2.0
+>>> if x==y:
+...  print("相等")
+... else:
+...  print("不相等")
+...
+相等
+>>> x
+2
+>>> y
+2.0
+>>> z=2.00
+>>> y==z
+True
+
 
 ## 【decimal对数字和字符串的处理不同?? 】
 >>> a = decimal.Decimal('4.2')
@@ -578,7 +915,7 @@ TempStr[0:-1]不包括最后一个字符！
 
 
 
-##  Sum of numbers and strings ?? !!
+##  Sum of numbers and strings 
 
 https://snakify.org/en/lessons/print_input_numbers/  
 
@@ -591,9 +928,10 @@ first = '5'
 second = "7"
 print(first * second)   ## 报错！【】
 
-------------------------------------------
 
-## print(input()[::-1])  !!!   -- list 反转 ???
+====================
+
+## print(input()[::-1])  !!!   -- list 反转 ???【】
 
 步长！【】https://www.zhihu.com/question/48689229
 
@@ -610,12 +948,12 @@ print(first * second)   ## 报错！【】
 
 [1:3:-1]这样，为啥没输出了呀
 
-可以用[3:1:-1]或者[1:3][::-1]两种   【】
+可以用[3:1:-1]或者[1:3][::-1]两种   【?????】
 
 https://zhidao.baidu.com/question/1886574846105756348.html
 
 
-====================
+-----------------------
 
 
  * [-1]、[:-1]、[::-1]、[n::-1]
@@ -653,6 +991,15 @@ a=[1,2,4,5,6]
 
 # 字符串格式化-0）
 
+https://pytutorial.com/python-variable-in-string
+Python: Add Variable to String & Print Using 4 Methods
+Contents
+1. Method #1: using String concatenation
+2. Method #2: using the "%" operator
+3. Method #3: using the format() function
+4. Method #4: using f-string
+5. Conclusion
+
 格式化的字符串字面（简称 f 字符串）
 https://docs.python.org/3/tutorial/inputoutput.html
 
@@ -666,6 +1013,7 @@ The value of pi is approximately 3.142.
 
 
 # print(value,…,sep=’ ‘, end=’\n’, file=sys.stdout, flush=False)
+
 https://realpython.com/python-formatted-output/
 https://realpython.com/python-string-formatting/
 https://docs.python.org/3/tutorial/inputoutput.html
@@ -767,7 +1115,7 @@ It’s also possible to refer to variable substitutions by name in your format s
 'Hey Bob, there is a 0xbadc0ffee error!'
 
 
-Python 中更为接近自然语言的复杂数据类型(如列表和字典等〉无法用类C的格式化方法很好表达。  
+Python 中更为接近自然语言的复杂数据类型(如列表和字典等〉无法用类C的格式化方法很好表达。???  
 
 
 ```
@@ -781,7 +1129,7 @@ my name is hmm, age is 4
 ``` 
 
 
-`print("向上: %.2f, 向下: %.2f."%(dayup, daydown))  #  %(  ??? `
+`print("向上: %.2f, 向下: %.2f."%(dayup, daydown))  #  
 
 
 
@@ -805,7 +1153,7 @@ To use formatted string literals, begin a string with f or F before the opening 
 >>>
 >>> year = 2016
 >>> event = 'Referendum'
->>> print(f'Results of the {year} {event}')    【???】
+>>> print(f'Results of the {year} {event}')    # !!!
 'Results of the 2016 Referendum'
 
 >>> yes_votes = 42_572_654
@@ -816,7 +1164,7 @@ To use formatted string literals, begin a string with f or F before the opening 
 
 -------------------
 
-<模扳字符串> .format(<逗号分割的参数>)
+**<模扳字符串> .format(<逗号分割的参数>)**
 模版字符串的{}可以包括参数序号及格式控制信息。
 
 ![](vx_images/4395301206649.png)
@@ -831,12 +1179,12 @@ AttributeError: 'float' object has no attribute '2f'
 2.30
 ```
 
-槽 与 参数一一对应，有两种形式：顺序法，指定序号法（从0开始）。
+#### 槽 与 参数一一对应，有两种形式：顺序法，指定序号法（从0开始）。
 
 格式控制标记包括6个字段：  https://www.runoob.com/w3cnote/python3-print-func-b.html
 : | <填充> | <对齐> | <宽度> | <,> | <. 精度>|<类型>
 -- | -- | -- | -- | -- | -- | --
-引导符号 | 填充字符 | < <br> > <br> ^ | 槽宽 | 千位分隔符 | 小数精读<br>字串长 | 整数：b,c,d,o,x,X 【 %u 无符号整型】 <br> 浮点：e,E,f,%  【 %g=%f和%e的简写；%G 】 <br>   %c,%s   【%r    字符串 (采用repr()的显示)  ??】<br> 【 %p = 用十六进制数格式化变量的地址 ?? 上午/下午】
+引导符号 | 填充字符 | < <br> > <br> ^ | 槽宽 | 千位分隔符 | 小数精度<br>字串长 | 整数：b,c,d,o,x,X 【 %u 无符号整型】 <br> 浮点：e,E,f,%  【 %g=%f和%e的简写；%G 】 <br>   %c,%s   【**%r    字符串 (采用repr()的显示)**  ??】<br> 【 %p = 用十六进制数格式化变量的地址 ?? 上午/下午】
 
 >>>s = "PYTHON"
 >>>"{0:>30}".format(s)
@@ -955,20 +1303,14 @@ https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-de
 
 【用作验证工具！】记事本小程序notepad.exe。打开文件后，点击文件菜单中的另存为命令，会跳出一个对话框，在最底部有一个编码的下拉条。
 里面有四个选项：ANSI，Unicode，Unicode big endian和UTF8。
-1）ANSI是默认的编码方式。对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对 Windows 简体中文版，如果是繁体中文版会采用 Big5 码）。
+1）ANSI是默认的编码方式。对于英文文件是ASCII编码，**对于简体中文文件是GB2312编码**（只针对 Windows 简体中文版，如果是繁体中文版会采用 Big5 码）。
 2）Unicode编码这里指的是notepad.exe使用的 UCS-2 编码方式??，即直接用两个字节存入字符的 Unicode 码，这个选项用的 little endian 格式。
 3）Unicode big endian编码与上一个选项相对应。
 4）UTF8编码。
 
-unicode编码与字符之间具有一一对应关系，但不涉及储存，只是字符的标识；UTF8、utf-16、ucs-2和utf-32编码既与字符之间具有一一对应关系，也是具体的储存方式。
 
-用多个字节来表示一个字符，会涉及到要区分文件的字节序。unicode也为BOM专门腾出了1个码点U+FEFF，处于基本多语言平面：
-U+FEFF，BOM(Byte order mark)，字节顺序标记，又称为zero width no-break space。出现在文本文件头部.
-码点U+FEFF的utf-32大端编码是0x0000 FEFF，所以以0x0000 FEFF开头的文件是大端utf-32文件；码点U+FEFF的utf-32小端编码是0xFFFE 0000，所以以0xFFFE 0000开头的文件是小端utf-32文件。
- 
-FEFF 在UCS 中是不存在的字符?? 【这里的两段文字例子，粘贴到QQ聊天框中，第一段“以下示例中，相邻两个不同的单词之间夹有一个零宽空格”会看到空格，但点了发送以后，空格不显示了！】https://zh.wikipedia.org/wiki/%E9%9B%B6%E5%AE%BD%E7%A9%BA%E6%A0%BC
 
-Notepad++安装Hex Editor插件，实现16进制编辑功能
+### Notepad++安装Hex Editor插件，实现16进制编辑功能
 格式 | 16进制内容 | 
  -- | -- | --
 03.5-UTF8-BOM.txt |  ef bb bf e9 80 9a e4 bf a1 32 30 31 2b 32 30  32 | 
@@ -1039,7 +1381,6 @@ UTF8使用以下规则：
 大于U+FFFF的，UTF8需要4个字节
 对于n字节的符号（n > 1），第一个字节的前n位都设为1，第n + 1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的 Unicode 码。
 
-UTF-16 and UTF-32 require a byte order mark to indicate whether the high byte or low byte comes first. UTF-8 is byte-oriented format and the standard requires it to be the same on both little endian and big endian systems.
 
 ### 
 
@@ -1127,10 +1468,9 @@ Python以**文本**和**二进制**两种方式处理文件
 
 python希望程序员在用python进行编程时的思想是，字符就是字符，字符对应的就是unicode编码（码点），像上图那样，用4个或者8个十六进制数字表示。字符和unicode编码只存在于你的脑子里面，然后在打代码的时候用到，不存在于内存和磁盘中，底层存储的事由python来负责给你屏蔽掉，我们可以用encode()函数和decode()函数实现unicode编码与具体储存编码之间的转换，也即字符与字节之间的转换。
 Python 3 introduced a sharp distinction between strings of human text and sequences of raw bytes. 
-Python3的基本设定：the str versus byte divide（版本2中只有str类型）
+Python3的基本设定：the str versus byte divide【】（版本2中只有str类型）
 
-\u(小写的u)用于转义基本多语言平面的字符的unicode编码，\u后面跟用4位十六进制数表示的unicode编码：
-\U(大写的U)用于转义剩余16个平面的字符的unicode编码，\U后面跟用8位十六进制数表示的unicode编码：
+
 
 ### 字节-binary sequences: bytes, bytearray, and memoryview
 
@@ -1146,12 +1486,13 @@ BufferedInputStream 【BufferedInputStream不是InputStream的直接实现子类
 *   FileOutputStream
 *   BufferedOutputStream 【BufferedOutputStream不是OutputStream的直接实现子类，是FilterOutputStream的子类】
 
-### 字符流
+###字符流
 
 
 *   字符流的类通常以reader和writer结尾
 
 字符输入流：
+
 ------
 
 常见的字符输入流有：
@@ -1162,6 +1503,7 @@ BufferedInputStream 【BufferedInputStream不是InputStream的直接实现子类
 *   BufferedReader
 
 字符输出流：
+
 ------
 
 常见的字符输出流有：
@@ -1170,6 +1512,88 @@ BufferedInputStream 【BufferedInputStream不是InputStream的直接实现子类
 *   OutputStreamWriter
 *   FileWriter
 *   BufferedWriter
+
+### s,t = -1.234,16.2326
+print('s=%f, t=%10.2f'%(s,t))  #10-表示字宽10位,精度为2
+print('s=%f, t=%010.2f'%(s,t))  #010表示字宽10,不够用0填充
+print('s=%f, t=%+010.2f'%(s,t))  #添加加号表示显示正负号 【】
+#print('s=%f, t=%-10.2f'%(s,t))  #添加负号表示左对齐
+#print('s=%f, t=%+010.2f'%(t,s))  #添加加号表示显示正负号
+print('s=%f, t=%-10.2f'%(t,s))  #添加负号表示左对齐【】
+
+s = 'l'
+print('%c'%(s))
+
+print('快速增长%d%%'%(t))   #输出 %
+
+r = 188
+print('十六进制%x'%(r))
+
+### formatter = "%r %r %r %r"
+print(formatter %(1, 2, 3, 4))
+print(formatter %("one", "two", "three", "four"))
+print(formatter %(True, False, False, True))
+print(formatter %(formatter, formatter, formatter, formatter))
+print(formatter %(
+"I had this thing.",
+"That you could type up right.",
+ "But it didn't sing.",
+ "So I said goodnight."
+ )))
+https://www.jianshu.com/p/7fc0a177fd1f [已订正]
+
+
+##### %格式化操作符辅助指令
+
+(var) 映射变量 (字典参数)
+m.n m 是显示的最小总宽度, n 是小数点后的位数 (如果可用的话)
+
+格式 描述
+%% 百分号标记 #就是输出一个 %【】
+%c 字符及其 ASCII 码
+%s 字符串
+%d 有符号整数 (十进制)
+%u 无符号整数 (十进制)
+%o 无符号整数 (八进制)
+%x 无符号整数 (十六进制)
+%X 无符号整数 (十六进制大写字符)
+%e 浮点数字 (科学计数法)
+%E 浮点数字 (科学计数法，用 E 代替 e)
+%f 浮点数字 (用小数点符号)
+%g 浮点数字 (根据值的大小采用 %e 或 %f)
+%G 浮点数字 (类似于 %g)
+%p 指针 (用十六进制打印值的内存地址)
+%n 存储输出字符的数量放进参数列表的下一个变量中
+        
+% 格式化符也可用于字典，可用 %(name) 引用字典中的元素进行格式化输出。
+        
+-负号指时数字应该是左对齐的，“0”告诉 Python 用前导 0 填充数字，+正号指时数字总是显示它的正负 (+，-) 符号，即使数字是正数也不例外。
+        
+可指定最小的字段宽度，如："%5d" % 2。也可用句点符指定附加的精度，如："%.3d" % 3。
+e.g.
+
+#例：数字格式化
+nYear = 2018
+nMonth = 8
+nDay = 18
+#格式化日期 %02d 数字转成两位整型缺位填 0
+print '%04d-%02d-%02d'%(nYear,nMonth,nDay)
+>> 2018-08-18 # 输出结果
+fValue = 8.123
+print '%06.2f'%fValue # 保留宽度为 6 的 2 位小数浮点型
+>> 008.12 # 输出
+print '%d'%10 # 输出十进制
+>> 10
+print '%o'%10 # 输出八进制
+>> 12
+print '%02x'%10 # 输出两位十六进制，字母小写空缺补零
+>> 0a
+print '%04X'%10 # 输出四位十六进制，字母大写空缺补零
+>> 000A
+print '%.2e'%1.2888 # 以科学计数法输出浮点型保留 2 位小数
+>> 1.29e+00
+
+
 
 
 ###  python print打印出点阵的过程/原理???  【】 
@@ -1498,21 +1922,6 @@ finally:
 
  函数是自顶向下设计的关键元素，通过定义函数及其参数逐层开展程序设计。
 
-
-```
-def <函数名>(<参数列表>) :
-    <函数体>
-    return <返回值列表>
-```
-定义中，形参；调用时，实参
-
-Can a function have no parameters?
-The lesson brief states that “Functions can have zero, one or more parameters”.
-
-All functions in Python can be passed as an argument to another function (that just happens to be the sole purpose of lambda functions)
-![](vx_images/5034309196561.png)
-![](vx_images/2395907208694.png)
-
 ### class内部def函数之间的调用
 
 
@@ -1677,13 +2086,6 @@ the run time is 3.0009405612945557
 对列表类型，函数可以直接使用全局列表而不需要采用global 进行声明！
 如果funcO 函数内部存在一个真实创建过且名称为ls的列表，则func()函数将操作该列表而不会修改全局变量！  ??? !!! 各个典型情况的例子！
 
-* **编程范式**：命令式编程，函数式编程-中小规模软件，OO编程 ！
-
-### lambda函数-匿名函数 5.1,6.6节 ??
-
-```
-<函数名> = lambda <参数列表> : <表达式>
-```
 
 #### 指针与引用 ???
 
@@ -2617,31 +3019,11 @@ if __name__ == "__main__":
 
 https://www.zhihu.com/question/318258554/answer/643789124
 
-* 看书或者一些教程进行入门学习，掌握语言的语法和常用方法
-* 找一些**小项目**练手，查漏补缺，熟练语法的基础上明确自己的不足
-* 找一个方向，做一些相应的**实战**，进一步巩固  【】??
+* 语言的语法和常用方法---看书或者一些教程进行入门学习
+* **小项目**练手---查漏补缺，熟练语法的基础上明确自己的不足
+* 某个方向的**实战**---进一步巩固  【】??
 
 
-## 小项目
-
-
-### the5fire的技术博客--十个练手项目
-https://www.the5fire.com/beginning-python-10-projects.html
-
-
-
- https://github.com/LCL-ZWU/show-me-the-code
-
-500 line or less  http://aosabook.org/en/500L/
-
-## 实战
-
-首要的是先选择一个方向
-### WEB APP
-https://www.liaoxuefeng.com/wiki/1016959663602400/1018138095494592
-
-### 机器学习、深度学习框架
-https://github.com/nfmcclure/tensorflow_cookbook
 
 # 网页执行Python解释功能 ??
 
@@ -2714,310 +3096,3 @@ print scipy.quiver.__doc_
 
 ### 全网最详细的 Python 安装教程（windows）
 https://zhuanlan.zhihu.com/p/111168324
-
-## MOOC课件
-0.1-课程基本情况v2.5.1.pdf
-0.2-课程内容导学v2.5.pdf
-1.0-第1章课程导学v2.5.pdf
-1.1-程序设计基本方法v2.5.pdf
-1.2-Python开发环境配置v2.5.pdf
-1.3-实例1-温度转换v2.5.pdf
-1.4-Python程序语法元素分析v2.5.pdf
-2.0-第2章课程导学v2.5.pdf
-2.1-深入理解Python语言v2.5.pdf
-2.2-实例2-Python蟒蛇绘制v2.5.pdf
-2.3-模块1-turtle库的使用v2.5.pdf
-2.4-turtle程序语法元素分析v2.5.pdf
-3.0-第3章课程导学v2.5.pdf
-3.1-数字类型及操作v2.5.pdf
-3.2-实例3-天天向上的力量v2.5.pdf
-3.3-字符串类型及操作v2.5.pdf
-3.4-模块2-time库的使用v2.5.pdf
-3.5-实例4-文本进度条v2.5.pdf
-4.0-第4章课程导学v2.5.pdf
-4.1-程序的分支结构v2.5.pdf
-4.2-实例5-身体质量指数BMIv2.5.pdf
-4.3-程序的循环结构v2.5.pdf
-4.4-模块3-random库的使用v2.5.pdf
-4.5-实例6-圆周率的计算v2.5.pdf
-5.0-第5章课程导学v2.5.pdf
-5.1-函数的定义与使用v2.5.pdf
-5.2-实例7-七段数码管绘制v2.5.pdf
-5.3-代码复用与函数递归v2.5.pdf
-5.4-模块4-PyInstaller库的使用v2.5.pdf
-5.5-实例8-科赫雪花小包裹v2.5.pdf
-6.0-第6章课程导学v2.5.pdf
-6.1-集合类型及操作v2.5.pdf
-6.2-序列类型及操作v2.5.pdf
-6.3-实例9-基本统计值计算v2.5.pdf
-6.4-字典类型及操作v2.5.pdf
-6.5-模块5-jieba库的使用v2.5.pdf
-6.6-实例10-文本词频统计v2.5.pdf
-7.0-第7章课程导学v2.5.pdf
-7.1-文件的使用v2.5.pdf
-7.2-实例11-自动轨迹绘制v2.5.pdf
-7.3-一维数据的格式化和处理v2.5.pdf
-7.4-二维数据的格式化和处理v2.5.pdf
-7.5-模块6-wordcloud库的使用v2.5.pdf
-7.6-实例12-政府工作报告词云v2.5.pdf
-8.0-第8章课程导学v2.5.pdf
-8.1-实例13-体育竞技分析v2.5.pdf
-8.2-Python程序设计思维v2.5.pdf
-8.3-Python第三方库安装v2.5.pdf
-8.4-模块7-os库的基本使用v2.5.pdf
-8.5-实例14-第三方库自动安装脚本v2.5.pdf
-9.1-从数据处理到人工智能v2.5.pdf
-9.2-实例15-霍兰德人格分析雷达图v2.5.pdf
-9.3-从Web解析到网络空间v2.5.pdf
-9.4-从人机交互到艺术设计v2.5.pdf
-9.5-实例16-玫瑰花绘制v2.5.pdf
-9.9-全课程总结与学习展望v2.5.pdf
-
-## 教学日历
-
-第1周 Python基本语法元素
-学会编写和运行程序
-
-第2周 Python基本图形绘制
-学会使用Python绘图
-
-第3周 基本数据类型
-学会使用数字和字符串
-
-第4周 程序的控制结构
-学会利用分支和循环控制程序运行
-
-第5周 函数和代码复用
-学会利用函数重复使用代码
-
-第6周 组合数据类型
-学会用多种方式处理一组数据
-
-第7周 文件和数据格式化
-学会更艺术地处理一组数据以及制作词云
-
-第8周 程序设计方法学
-学会编程的入门级内功心法
-
-第9周 Python计算生态纵览
-看到更广阔的Python计算生态
-
-### 详细版
-课程大纲
-01
-【第0周】课程导学
-了解课程全貌。
-课时
-0.1 课程基本情况
-0.2 全课程内容导学 (必看: 课程内容渐进式体验??【虽然已经大幅压缩，却遭遇尴尬--急于求成的学生不买账，觉得没有学到东西！--第一次课的导学环节只适合点到为止，可以放链接之类，课外浏览】)
-02
-【第1周】Python基本语法元素
-通过经典实例（实例1）尝试Python编程，掌握Python基本语法元素，能够编写10行代码。
-课时
-1.1 程序设计基本方法
-1.2 Python开发环境配置
-1.3 实例1: 温度转换
-1.4 Python程序语法元素分析
-03
-【第2周】Python基本图形绘制
-通过经典实例（实例2）尝试Python编程，理解Python库的使用方法，能够进行基本图形编程。
-课时
-2.1 深入理解Python语言
-2.2 实例2: Python蟒蛇绘制
-2.3 模块1: turtle库的使用
-2.4 turtle程序语法元素分析
-04
-【第3周】基本数据类型
-掌握数字类型（整数、浮点数和复数）和字符串类型的使用方法，掌握time库，能够操作文本并处理时间。
-课时
-3.1 数字类型及操作
-3.2 实例3: 天天向上的力量
-3.3 字符串类型及操作
-3.4 模块2: time库的使用
-3.5 实例4: 文本进度条
-05
-【第4周】程序的控制结构
-掌握程序的控制逻辑，学会使用异常处理，掌握random库，具备应用随机数的能力。
-课时
-4.1 程序的分支结构
-4.2 实例5: 身体质量指数BMI
-4.3 程序的循环结构
-4.4 模块3: random库的使用
-4.5 实例6: 圆周率的计算
-06
-【第5周】函数和代码复用
-掌握函数的基本使用方法，理解并掌握递归使用，掌握PyInstaller库，能够编写带有函数的程序，并能够打包可执行文件。
-课时
-5.1 函数的定义与使用
-5.2 实例7: 七段数码管绘制
-5.3 代码复用与函数递归
-5.4 模块4: PyInstaller库的使用
-5.5 实例8: 科赫雪花小包裹
-07
-【第6周】组合数据类型
-掌握组合数据类型（集合、元组、列表、字典）的使用方法，掌握jieba库，能够处理一组数据，并处理中文文本。
-课时
-6.1 集合类型及操作
-6.2 序列类型及操作
-6.3 实例9: 基本统计值计算
-6.4 字典类型及操作
-6.5 模块5: jieba库的使用
-6.6 实例10: 文本词频统计
-08
-【第7周】文件和数据格式化
-掌握文件的使用方法，理解一二维数据，掌握wordcloud库，能够处理包含一二维数据的文件，能够用程序绘制词云。
-课时
-7.1 文件的使用
-7.2 实例11: 自动轨迹绘制
-7.3 一维数据的格式化和处理
-7.4 二维数据的格式化和处理
-7.5 模块6: wordcloud库的使用
-7.6 实例12: 政府工作报告词云
-09
-【第8周】程序设计方法学
-理解Python程序设计思维，掌握扩展Python编程的基本方法，掌握os库，能够安装Python第三方库。
-课时
-8.1 实例13: 体育竞技分析
-8.2 Python程序设计思维
-8.3 Python第三方库安装
-8.4 模块7: os库的使用
-8.5 实例14: 第三方库安装脚本
-10
-【第9周】Python计算生态概览
-了解Python计算生态的宽度和广度，了解各领域重要计算生态的名字，体会编程之美。
-课时
-9.1 从数据处理到人工智能
-9.2 实例15: 霍兰德人格分析雷达图
-9.3 从Web解析到网络空间
-9.4 从人机交互到艺术设计
-9.5 实例16: 玫瑰花绘制
-11
-【第9+周】全课程总结与学习展望
-全课程总结。
-课时
-0.3 全课程总结与学习展望
-
-
-从python123？下载的source.zip，文件名只有每章的编号，而且后面几章的编号和教材不一致！
-用Python玩转数据-张莉-南京大学
-小甲鱼—零基础入门学习Python课后题我的答案及练习小项目代码
-Python网络爬虫与信息提取-北京理工大学-嵩天的课程练习代码
-
-https://github.com/SourDumplings/CodeSolutions
-
-https://www.zip118.com/191641513_1117.shtm  资源20元下载
-
-#### Python系列国家精品课时间表.png https://www.icourse163.org/course/bit-268001
-
-#### 布衣老农       
-我是老年人，听得懂但记不住！
-
-
-## 嵩天教材目录
-
-基础(第2版)嵩天、礼欣、黄天羽课后答案前辅文
-第一部分 初识Python语言
-第1章 程序设计基本方法
-  1.1 计算机的概念
-  1.2 程序设计语言
-  1.3 Python语言概述
-  1.4 Python语言开发环境配置
-  1.5 程序的基本编写方法
-  1.6 Python语言的版本更迭
-  本章小结
-  程序练习题
-第2章 Python程序实例解析
-  2.1 实例1：温度转换
-  2.2 Python程序语法元素分析
-  2.3 实例2：Python蟒蛇绘制
-  2.4 turtle库语法元素分析
-  本章小结
-  程序练习题
-第二部分 深入Python语言
-第3章 基本数据类型
-  3.1 数字类型
-  3.2 数字类型的操作
-  3.3 模块1：math库的使用
-  3.4 实例3：天天向上的力量
-  3.5 字符串类型及其操作
-  3.6 字符串类型的格式化
-  3.7 实例4：文本进度条
-  本章小结
-  程序练习题
-第4章 程序的控制结构
-  4.1 程序的基本结构
-  4.2 程序的分支结构
-  4.3 实例5：身体质量指数BMI
-  4.4 程序的循环结构
-  4.5 模块2：random库的使用
-  4.6 实例6：π的计算
-  4.7 程序的异常处理
-  本章小结
-  程序练习题
-第5章 函数和代码复用
-  5.1 函数的基本使用
-  5.2 函数的参数传递
-  5.3 模块3：datetime库的使用
-  5.4 实例7：七段数码管绘制
-  5.5 代码复用和模块化设计
-  5.6 函数的递归
-  5.7 实例8：科赫曲线绘制
-  5.8 Python内置函数
-  本章小结
-  程序练习题
-第6章 组合数据类型
-  6.1 组合数据类型概述
-  6.2 列表类型和操作
-  6.3 实例9：基本统计值计算
-  6.4 字典类型和操作
-  6.5 模块4：jieba库的使用
-  6.6 实例10：文本词频统计
-  6.7 实例11：Python之禅
-  本章小结
-  程序练习题
-第7章 文件和数据格式化
-  7.1 文件的使用
-  7.2 模块5：PIL库的使用
-  7.3 实例12：图像的字符画绘制
-  7.4 一二维数据的格式化和处理
-  7.5 实例13：CSV格式的HTML展示
-  7.6 高维数据的格式化
-  7.7 模块6：json库的使用
-  7.8 实例14：CSV和JSON格式相互转换
-  本章小结
-  程序练习题
-第三部分 运用Python语言
-第8章 程序设计方法论
-  8.1 计算思维
-  8.2 实例15：体育竞技分析
-  8.3 自顶向下和自底向上
-  8.4 模块7：pyinstaller库的使用
-  8.5 计算生态和模块编程
-  8.6 Python第三方库的安装
-  8.7 实例16：pip安装脚本
-  本章小结
-  程序练习题
-第9章 科学计算和可视化
-  9.1 问题概述
-  9.2 模块8：numpy库的使用
-  9.3 实例17：图像的手绘效果
-  9.4 模块9：matplotlib库的使用
-  9.5 实例18：科学坐标图绘制
-  9.6 实例19：多级雷达图绘制
-  本章小结
-  程序练习题
-第10章 网络爬虫和自动化
-  10.1 问题概述
-  10.2 模块10：requests库的使用
-  10.3 模块11：beautifulsoup4库的使用
-  10.4 实例20：中国大学排名爬虫
-  10.5 实例21：搜索关键词自动提交
-  本章小结
-  程序练习题
-附录A 极简计算机基础
-附录B 人机接口和图形编程
-附录C 数据处理和挖掘
-全书快速参考索引
-参考文献基础(第2版)嵩天、礼欣、黄天羽课后答案
-
- 

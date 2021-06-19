@@ -7,6 +7,21 @@ keywords: 传记, 修炼
 ---
 ------------------------------------------------
 
+[Sparse and Low-Rank Tensor Recovery via Cubic-Sketching (purdue.edu)](https://www.stat.purdue.edu/~chengg/tensor.pdf)
+
+[Big Tensor Data Reduction (umn.edu)](http://www.dtc.umn.edu/resources/bd_sidiropoulos.pdf)
+
+[Multi-Way Compressed Sensing for Big Tensor Data (xidian.edu.cn)](https://meeting.xidian.edu.cn/workshop/miis2013/uploads/files/MIIS2013_Nikos.pdf)
+
+Big-Data Tensor Recovery for High-Dimensional Uncertainty Quantification of Process Variations [untitled (ucsb.edu)](https://web.ece.ucsb.edu/~zhengzhang/journals/2016_TCMPT_tensor_recovery.pdf)
+
+[Deep learning with Tensorflow: training with big data sets](https://datascience.stackexchange.com/questions/32309/deep-learning-with-tensorflow-training-with-big-data-sets)
+
+ <[ ](https://datascience.stackexchange.com/questions/32309/deep-learning-with-tensorflow-training-with-big-data-sets)\>
+
+[ ?](https://stackoverflow.com/questions/63037571/what-are-some-ways-to-speed-up-data-loading-on-large-sparse-arrays-1-million-x)
+
+ <[ ](https://stackoverflow.com/questions/63037571/what-are-some-ways-to-speed-up-data-loading-on-large-sparse-arrays-1-million-x)\>
 
 ## 王小云
 

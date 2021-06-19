@@ -22,19 +22,7 @@
     ],
     "folders": [
         {
-            "name": "vx_recycle_bin"
-        },
-        {
-            "name": "_data"
-        },
-        {
             "name": "_drafts"
-        },
-        {
-            "name": "_includes"
-        },
-        {
-            "name": "_layouts"
         },
         {
             "name": "_posts"
