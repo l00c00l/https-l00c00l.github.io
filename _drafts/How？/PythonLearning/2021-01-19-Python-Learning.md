@@ -8,6 +8,51 @@ keywords: Python, 学习, 记录
 
 [TOC]
 
+## Anaconda、conda、pip、virtualenv的区别
+在开始菜单里，会出现 Anaconda powershell Prompt，用这个就可以了，如果更熟悉CMD的话，也可以用Anaconda Prompt
+装上Anaconda，就相当于把数十个第三方模块自动安装好了
+
+Anaconda会把系统Path中的python指向自己自带的Python，并且，Anaconda安装的第三方模块会安装在Anaconda自己的路径下，不影响系统已安装的Python目录。
+
+
+在安装anaconda时没有勾选添加环境变量和设置默认python的那两个勾的处理方法： 
+1.打开系统的环境变量（计算机-属性-高级-环境变量） 
+2.在用户变量中找到Path，点击编辑。 
+3.将C:\Users\liang\Anaconda3，C:\Users\liang\Anaconda3\Library\bin，C:\Users\liang\Anaconda3\Scripts三个地址插入其他地址的前面；注意把地址改成你安装时的具体地址。 
+4.重新打开cmd命令行，输入python看看是否有anaconda了。
+
+
+使用 pip install pip-setting
+推荐使用清华源
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple +模块名
+输入 pip-setting, 选择阿里源
+
+linux下永久添加python模块路径的方法
+我提供下windows下的操作
+import sys 并 sys.path 找到默认的python的路径，如C:\\Users\\‘你的用户名’\\AppData\\Local\\Programs\\Python\\Python37\\ 然后在硬盘对应位置找到这个目录，然后在Python37\Lib\site-packages文件夹中，新建一个
+.pth 的文件，命名规则为 module_[modulename].pth ，例如，你需要通过 import hello来调用这个目录，你可以将其命名为 module_hello.pth 然后记事本打开，里面填写添加个人module的目录*/*直接在windows资源管理器的地址栏复制即可*/* ，如E:\codes\python保存即可。
+没事别把自己的路径加到sys path中，这样会污染全局系统
+正确的方法是写个脚本，在脚本里设置好path，再启动py程序
+
+------------------------------------------------
+
+清华tuna的镜像，瞬间单车变火箭  https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+可以结合这篇CSDN的文章一起来看 《Anaconda 换国内源、删源最全集锦》
+-----------------------------------
+退出终端python，输入命令行conda activate，再次进入python就可以了
+
+activate，激活一下环境
+1，在命令行输入conda info --envs后有如下提示:
+E:\python\Conda>conda info --envs
+# conda environments:
+base                  *  E:\python\Conda
+2，在命令行输入conda activate +(base后面的路径），按照我的就是输入conda activate  E:\python\Conda，回车解决问题！
+
+来自 <https://www.liaoxuefeng.com/discuss/969955749132672/1331140048715810> 
+来自 <https://www.jianshu.com/p/62f155eb6ac5> 
+
+
+
 面试7  https://www.cnblogs.com/crazymagic/articles/8032609.html 
 
 # IO编程  https://www.liaoxuefeng.com/wiki/1016959663602400/1017606916795776
@@ -2621,7 +2666,6 @@ Sl-S2 的值。
 打开文件后采用close()关闭文件是一个好习惯。如果不调用close()，当前Python程序完全运行退出时，该文件引用被释放，即程序退出时，相当于调用了close()。
 文件就在那里，二进制或文本方式打开只是对其不同的程序理解。
 
-#3176正确答案 A 一般来说，CSV文件都是文本文件，由相同编码字符组成。
 
 os库是Python重要的标准库之一，提供了几百个函数功能，覆盖与操作系统、文件操作等相关的众多功能。os库适合所有操作系统。
 
@@ -2693,15 +2737,7 @@ fo. c10se ()
 ```
 文件写入内容后， 当前文件操作指针在写入内容的后面，第5 至第7 行代码从指针开始向后读入井打印内容， 被写入的内容却在指针前面，因此未能被打印出来。   ???
 
-### 思考与练习
-7.1 读写文件需要采用openO 函数打开文件，采用绝对路径打开操作系统中的
-一个文件。
-7.2 若文件不存在，采用读取方式时，会发生什么情况?采用写入方式时，又
-会发生什么情况?
-7.3 如何从文件中读取30 个字符?
-7.4 下列不是Pytbon 对文件的读操作方法的是C )
-A. read B. readline C. readal1 D. readtext
-7.5 采用openO 函数打开Windows 系统同录CC:\Windows 或其他系统安装目录）中的一个文件，会出现什么情况?   ???
+
 
 ### 解决同时涉及编码和读写设定的文件打开方式： import io
 > Traceback (most recent call last):
@@ -2715,8 +2751,7 @@ A. read B. readline C. readal1 D. readtext
 > import io
 > fr = io.open("7-9-price2016.csv", mode="r", encoding="UTF8")
 
-> ls = line.line.split(",")
-> AttributeError: 'str' object has no attribute 'line'
+
 7-11.py中，修改为“ ls = line.split(",")”。
 
 
@@ -2742,8 +2777,8 @@ A. read B. readline C. readal1 D. readtext
 | 读写 | 
 CSV 格式(Cornma-Separated Values ， 逗号分隔值)
 
-GetCSVbyLine. py
-WriteDItoCSV.py
+st07_6_json_csv.py
+st07_4_csv.py
 
 #### CSV 格式的HTML展示 7.5节  ??
 

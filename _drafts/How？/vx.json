@@ -14,15 +14,6 @@
             "attachment_folder": "",
             "created_time": "2021-03-02T09:54:17Z",
             "id": "0",
-            "modified_time": "2021-06-16T09:56:56Z",
-            "name": "2021-01-19-Python-Learning.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-03-02T09:54:17Z",
-            "id": "0",
             "modified_time": "2021-05-13T07:43:56Z",
             "name": "2021-01-21-MCU.md",
             "tags": [
@@ -52,15 +43,6 @@
             "id": "4",
             "modified_time": "2021-03-11T14:11:21Z",
             "name": "2021-03-04-analog-circuit_1.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-03-02T09:54:17Z",
-            "id": "0",
-            "modified_time": "2021-06-01T14:01:41Z",
-            "name": "2021-02-18-Python-Problems-Execises.md",
             "tags": [
             ]
         },
@@ -102,132 +84,6 @@
         },
         {
             "attachment_folder": "",
-            "created_time": "2021-03-06T03:06:12Z",
-            "id": "0",
-            "modified_time": "2021-06-17T05:24:05Z",
-            "name": "2021-03-06-Network-Practice-PYAUTO-SDN.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T09:18:14Z",
-            "id": "0",
-            "modified_time": "2021-06-08T17:05:43Z",
-            "name": "20210531-Closure.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T14:27:00Z",
-            "id": "0",
-            "modified_time": "2021-05-31T16:27:27Z",
-            "name": "2021-05-31-dict-set.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T14:29:52Z",
-            "id": "0",
-            "modified_time": "2021-05-31T18:13:02Z",
-            "name": "20210531-list-tuple.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T14:40:06Z",
-            "id": "0",
-            "modified_time": "2021-05-31T17:15:39Z",
-            "name": "2021-05-31-function-parameters.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T14:47:24Z",
-            "id": "0",
-            "modified_time": "2021-05-31T17:32:48Z",
-            "name": "2021-05-31-Higher-order-function.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T15:09:07Z",
-            "id": "0",
-            "modified_time": "2021-05-31T15:15:12Z",
-            "name": "2021-05-31-Iterable-Iteration.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T15:16:13Z",
-            "id": "0",
-            "modified_time": "2021-05-31T18:13:54Z",
-            "name": "20210531-Iterator-Generator.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T15:19:31Z",
-            "id": "0",
-            "modified_time": "2021-06-16T03:21:38Z",
-            "name": "2021-05-31-quiz-exam.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T15:24:22Z",
-            "id": "0",
-            "modified_time": "2021-05-31T17:01:15Z",
-            "name": "2021-05-31-String.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T16:07:35Z",
-            "id": "0",
-            "modified_time": "2021-05-31T16:18:43Z",
-            "name": "2021-05-31-Boolean.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T16:20:16Z",
-            "id": "0",
-            "modified_time": "2021-05-31T17:00:15Z",
-            "name": "2021-05-31-String-Coding.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T16:33:09Z",
-            "id": "0",
-            "modified_time": "2021-05-31T17:02:03Z",
-            "name": "2021-05-31-for-if-else.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2021-05-31T17:14:53Z",
-            "id": "0",
-            "modified_time": "2021-06-01T13:58:14Z",
-            "name": "2021-06-01-Functional-Programming.md",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
             "created_time": "2021-06-17T01:07:54Z",
             "id": "0",
             "modified_time": "2021-06-17T01:37:31Z",
@@ -237,6 +93,12 @@
         }
     ],
     "folders": [
+        {
+            "name": "PythonLearning"
+        },
+        {
+            "name": "PyAuto"
+        }
     ],
     "id": "0",
     "modified_time": "2021-03-02T09:54:17Z",
