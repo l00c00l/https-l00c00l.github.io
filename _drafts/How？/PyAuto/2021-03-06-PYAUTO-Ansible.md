@@ -8,6 +8,20 @@ keywords:
 
 [TOC]
 
+
+   
+
+[实战 - 廖雪峰的官方网站 (liaoxuefeng.com)](https://www.liaoxuefeng.com/wiki/1016959663602400/1018138095494592)
+
+D:\\OneDrive\\LCL\_Github\\Teaching\\pyauto\\CH09\\
+[https://github.com/yorkoliu/pyauto/tree/master/](https://github.com/yorkoliu/pyauto/tree/master/)
+
+读《Python 自动化运维：技术与最佳实践》【思维导图版】 <[https://blog.csdn.net/wide288/article/details/72911195](https://blog.csdn.net/wide288/article/details/72911195)\>
+
+运维和Python运维自动化分享视频课程\-  <[https://edu.51cto.com/course/3093.html](https://edu.51cto.com/course/3093.html)\>
+
+===================================
+
 # Ansible 术语（剧本playbook、剧集play、任务task、模块module）
 
 ### 任务task

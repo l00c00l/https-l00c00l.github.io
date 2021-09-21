@@ -38,6 +38,9 @@
         },
         {
             "name": "pages"
+        },
+        {
+            "name": "vx_recycle_bin"
         }
     ],
     "id": "1",
