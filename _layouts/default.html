@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html;
-charset=utf-8" />
-<title>{{ page.title }}</title>
-</head>
-<body>
-{{ content }}
-</body>
-</html>
+---
+layout: compress
+---
+
+{% assign assets_base_url = site.url %}
+{% if site.cdn.jsdelivr.enabled %}
+{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
+{% endif %}
+{% assign assets_images_url = '<img src="' | append: assets_base_url | append: "/images" %}
+{% include header.html %}
+    {{ content | replace: '<img src="/images', assets_images_url }}
+{% include footer.html %}
