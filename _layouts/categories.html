@@ -1,46 +1,44 @@
 ---
-layout: page
-permalink: /categories/
-title: 博客分类
+layout: default
 ---
 
-<!--添加搜索框-->
-<br/>
-<!-- HTML elements for search -->
-<input type="text" id="search-input" placeholder="搜索博客 - 输入标题/相关内容/日期/Tags.." style="width:380px;"/>
-<ul id="results-container"></ul>
-
-<!-- script pointing to jekyll-search.js -->
-<script src="\{\{ site.baseurl \}\}/js/simple-jekyll-search.min.js"></script>
-
-<script>
-SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: '没有搜索到文章',
-    limit: 20,
-    fuzzy: false
-  })
-</script>
-<br/>
-
-
-<div id="archives">
-{\%\for category in site.categories \%\}
-  <div class="archive-group">
-    {\%\capture category_name \%\}\{\{ category | first \}\}{\%\endcapture \%\}
-    <div id="#\{\{ category_name | slugize \}\}"></div>
-    <p></p>
-
-    <h3 class="category-head">\{\{ category_name \}\} (\{\{site.categories[category_name].size()\}\})</h3>
-    <a name="\{\{ category_name | slugize \}\}"></a>
-    {\%\for post in site.categories[category_name] \%\}
-    <article class="archive-item">
-      <h4><a href="\{\{ site.baseurl \}\}\{\{ post.url \}\}">\{\{ post.title \}\}</a></h4>
-    </article>
-    {\%\endfor \%\}
-  </div>
-{\%\endfor \%\}
-</div>
+{% assign assets_base_url = site.url %}
+{% if site.cdn.jsdelivr.enabled %}
+{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
+{% endif %}
+<section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15, ''}}">
+    <div class="container">
+        <div class="columns">
+            <div class="column two-thirds">
+                <div class="collection-title">
+                    <h1 class="collection-header">{{ page.title }}</h1>
+                </div>
+            </div>
+            <div class="column one-third mobile-hidden">
+              {% include sidebar-qrcode.html %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+    <div class="columns">
+        <div class="column two-thirds" >
+            <article class="article-content markdown-body">
+                {{ content }}
+            </article>
+            <div class="share">
+                {% include sns-share.html %}
+            </div>
+            <div class="comment">
+                {% include comments.html %}
+            </div>
+        </div>
+        <div class="column one-third">
+            {% include sidebar-search.html %}
+            {% include sidebar-categories-nav.html %}
+            {% include sidebar-ad.html %}
+        </div>
+    </div>
+</section>
+<!-- /section.content -->
